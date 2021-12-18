@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS2</title>
+    <style>
+        .lm {
+         border: 4px solid red;
+         background-color: black;
+         margin: 10px 20px;
+         padding: 20px 20px; 
+         word-spacing: 8px;
+         max-width: 500px;  
+         position: sticky;
+         top: 5px;
+         z-index: 999;
+        }
+        li{
+            display: inline;
+        }
+        li:link{
+            background-color: rgb(18, 33, 248);s
+        }
+        a:visited {
+            color: red;
+            font-size: 20px;
+        }
+        li:hover{
+            background-color: blanchedalmond;
+            font-size: 20px;
+            cursor: pointer;
+        border : 2px solid red;
+        }
+        li:active{
+            background-color:orange;
+        }
+        .cl{
+            background-color: gray;
+            margin: 30px 10px;
+            padding: 20px ;
+            text-align: center;
+            position: relative;
+            height: 100px;
+        }
+        .lk{
+            background-color: red;
+            width: 50px;
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            border: 2px solid green;
+
+        }
+        .mq{
+            background-color: blue;
+            width: 40px;
+            height: 30px;
+            padding-top: 9px;
+             text-align: center;
+             font-weight: bold;
+            color: black;
+            border: 1px solid red;
+            border-radius: 30px;
+            cursor: help;
+            position: fixed;
+            bottom: 2px;
+            right: 20px;
+            z-index: 99;
+        }
+        .ms{
+            background-color: blueviolet;
+            padding: 9px 9px;
+            margin: 10px 10px;
+            height: 50px;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+        ::selection{
+            background-color: chocolate;
+            color: blue;
+        }
+        span{
+            background-color: yellow;
+            border: 2px solid red;
+            display: inline-block;
+            color: black;
+            height: 40px;
+            width: 80px;
+        }
+        div + p:hover{
+            background-color: gray;
+            color: chartreuse;
+            font-size: xx-large;
+
+        }
+        article + p{
+            background-color: greenyellow;
+            color: red;
+            padding: 10px 10px;
+        }
+        input:checked{
+            color: rgb(18, 33, 248);
+            font-size: xx-large;
+            height: 40px;
+            width: 40px;
+        }
+        input:focus{
+            background-color: orange;
+
+        }
+        /*input:enabled{
+            background-color: blue;
+        
+        }*/
+        input:disabled{
+                   background-color: lightcoral;
+        }
+        .mm:empty{
+            background-color: red;
+            height: 20px;
+            width: 90px;
+        }
+        p:first-child:hover{
+                           background-color: blue;
+                           transition: 2s;
+        }
+        p:last-child:hover{
+            cursor: wait;
+            background-color: yellow;
+            border: 5px solid green;
+        }
+        p:nth-child(even):hover{
+            background-color: red;
+            transition: 2x;
+            font-size: 30px;
+            color: yellow;
+        }
+        input:in-range{
+                 background-color: peru;
+        }
+        input:out-of-range{
+            background-color: red;
+        }
+        input:invalid{
+            background-color: red;
+        }
+        input:optional{
+            border: 5px solid orange;
+        }
+        input:read-only{
+            background-color: yellow;
+            color: black;
+        }
+        input:valid{
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+<body>
+         <ul class="lm">
+             <li>
+                 <a href="/Assignment-1/elon.html" target="_blank">ELON</a></li>
+                 <li>
+                 <a href="/Assignment-1/main.html" target="_blank">MENU</a>
+                 </li>
+                 <li>
+                 <a href="/Assignment-1/Tesla.html" target="_blank">TESLA</a>
+             </li>
+         </ul>
+         <div class="cl">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque tempora a, rerum blanditiis dolorem delectus neque! Tempore nisi perspiciatis ipsam quas, quibusdam molestiae explicabo corporis alias inventore iste? Dolorum, eius.
+             <p class="lk"> ytrhytr</p>
+         </div>
+         <p class="mq">Chat</p>
+         <p class="ms">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis dicta error molestiae ratione. A ab quisquam, fuga repellendus pariatur praesentium similique expedita magnam necessitatibus suscipit. Consequatur culpa repellat necessitatibus quod. Lorem ipsum dolor sit amet <span>consectetur</span> adipisicing elit. Enim dolores aut ea assumenda. Placeat doloremque, nulla eos excepturi <span>consequatur</span> laboriosam aspernatur dolore. In, atque rerum ex ab repellendus cumque saepe!
+         </p>
+         <div>
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium officiis aliquam aperiam eaque. Accusantium sed sunt cum et nostrum autem excepturi aspernatur, officiis dolores ab repudiandae ullam quibusdam rem velit!
+             <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, maxime ipsum vitae ea at quos delectus eum ullam tempora rerum autem reprehenderit eligendi aspernatur quasi molestias eaque illum, nesciunt doloribus!
+            </p>
+         </div>
+        
+         <p>
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quae sapiente delectus, rem rerum natus molestiae ab maxime repudiandae et laborum impedit nostrum id, beatae temporibus sunt laudantium dolore nemo?
+         </p>
+         <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium officiis aliquam aperiam eaque. Accusantium sed sunt cum et nostrum autem excepturi aspernatur, officiis dolores ab repudiandae ullam quibusdam rem velit!
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cum culpa fugit velit suscipit saepe minima voluptatibus provident quos sapiente accusamus optio quod porro dolor, ducimus, earum deserunt. Fugiat, debitis.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cum culpa fugit velit suscipit saepe minima voluptatibus provident quos sapiente accusamus optio quod porro dolor, ducimus, earum deserunt. Fugiat, debitis.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cum culpa fugit velit suscipit saepe minima voluptatibus provident quos sapiente accusamus optio quod porro dolor, ducimus, earum deserunt. Fugiat, debitis.
+            </p>
+         </article>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde, maxime ipsum vitae ea at quos delectus eum ullam tempora rerum autem reprehenderit eligendi aspernatur quasi molestias eaque illum, nesciunt doloribus!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quae sapiente delectus, rem rerum natus molestiae ab maxime repudiandae et laborum impedit nostrum id, beatae temporibus sunt laudantium dolore nemo?
+        </p>
+        <hr>
+        <form action="">
+            <input type="radio" name="male" id="Gender">Male <br>
+            <input type="radio" name="" id="">Female
+            <br>
+            <hr>
+            <label for="name">Name</label><br>
+            <input type="text" name="name" id="fname" maxlength="10" minlength="4" placeholder="Name" required>
+            <br>
+            <label for="">Phone</label>
+           <br>
+            <input type="number" name="Muk" id="" disabled placeholder="PHONE" min="4" max="" required>
+            <br>
+            <label for="Number">LAST NAME</label>
+            <br>
+            <input type="number" name="lname" id="" min="4" max="10" placeholder="Last Name" required>
+            <br>
+            <label for="">Mail</label>
+                 <br>
+                 <input type="email" name="" id="" required>
+                 <br>
+                 <label for="">Optional</label>
+                 <br>
+                 <input>
+                 <br><br><br>
+                 <input type="text" name="" id="" placeholder="Hello" readonly required>
+        </form>
+        <hr>
+        <p class="mm"></p>
+    </body>
+</html>

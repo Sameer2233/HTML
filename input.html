@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Work</title>
+    <style>
+        div{
+            background-color: red;
+            height: 700px;
+            width: 700px;
+            margin: 100px 100px;
+            padding: 200px;
+            text-align: center;
+        }
+        input:disabled{
+            background-color: turquoise;
+            cursor: wait;
+        }
+        input:required{
+            background-color: yellow;
+        }
+           input:valid{
+               background-color: green;
+               border: 3px solid gray;
+           }
+           input:invalid{
+               background-color: blue;
+           }
+           label::first-letter{
+               color: rgb(36, 248, 17);
+           }
+           label:first-child:hover{
+               background-color: darkorange;
+               margin: 1px 1px;
+               padding: 2px 2px;
+               border: 2px solid brown;
+               cursor: pointer;
+           }
+           input:focus{
+               background-color: orange;
+               cursor: pointer;
+               border: 3px solid black;
+               border-radius: 5px;
+           }
+    </style>
+</head>
+<body> <div>
+    <form action="">
+        <label for="">Name</label>
+        <br>
+        <br>
+        <input type="text" name="name" id="" placeholder="Name" maxlength="6" minlength="3" required>
+        <br>
+        <br>
+        <br>
+        <label for="">Phone</label>
+        <br>
+        <br>
+        <input type="text" name="" id="" max="11" min="4" placeholder="Number" required>
+        <br>
+        <br><br>
+        <label for="">Email</label>
+        <br>
+        <br>
+        <input type="email" name="" id="" placeholder="Mail" required >
+        <br><br><br>
+        <label for="">Number</label>
+        <br>
+        <br>
+        <input type="number" name="" id="" disabled placeholder="Number" >
+        <br><br><br>
+           <textarea name="" id="" cols="30" rows="10">Please Comment us</textarea>
+    </form>
+    </div>
+</body>
+</html>

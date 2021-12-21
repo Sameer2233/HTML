@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Work</title>
     <style>
+        .lm{
+               list-style-type: none;
+               background-color: orange;
+               top: 0px;
+               left: 20px;
+               padding: 20px 30px;
+               position: sticky;
+               width: 90%;
+               text-decoration: none;
+               justify-content: space-around;
+               display: flex;
+           }
+           .ll{
+               font-size: 30px;
+               display: inline;
+           }
+           li{
+               display: inline;
+        text-decoration: none;
+        font-size: 15px;
+        padding-top: 40px;
+           }
         div{
             background-color: red;
             height: 700px;
@@ -27,7 +49,7 @@
            }
            input:invalid{
                background-color: blue;
-           }
+            }
            label::first-letter{
                color: rgb(36, 248, 17);
            }
@@ -44,9 +66,46 @@
                border: 3px solid black;
                border-radius: 5px;
            }
+           .drop{
+               position: relative;
+               display: block;
+           }
+           .dropct a:hover{
+               background-color: thistle;
+               border: 3px solid brown;
+               padding: 2px 2px;
+               border-radius: 5px;
+           }
+           .dropct{
+               display: none;
+               position: absolute;
+               background-color: yellow;
+               line-height: 2;
+               padding: 10px;
+           }
+           .drop:hover .dropct{
+               display: block;
+               border-radius: 20px;
+           }
     </style>
 </head>
-<body> <div>
+<body>
+    <ul class="lm">
+        <p class="ll">UNSPLASH</p>
+        <li><a href="">Home</a></li>
+        <li><a href="">NEWS</a></li>
+        <li class="drop"><a href="">CONTACT</a>
+            <p class="dropct">
+                <a href="">home</a>
+                <a href="">home</a>
+                <a href="">home</a>
+                <a href="">home</a>
+
+            </p>
+        </li>
+        <li><a href="">HTML</a></li>
+    </ul>
+    <div>
     <form action="">
         <label for="">Name</label>
         <br>

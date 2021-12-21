@@ -1,8 +1,12 @@
-<!DOCTYPE html>
+7<!DOCTYPE html>
 <html>
     <head>
         <title>Article about Pragramming</title>
         <style>
+            img:hover{
+                opacity: 0.5;
+                cursor: text;
+            }
             .id{
                 text-align: center;
                  shape-outside: padding-box;
@@ -45,10 +49,68 @@
                     background-color: yellow;
                     color: red;
                 }
-            
+              .ll{
+                     background-color: green;
+                     padding: 30px 20px;
+                     position: fixed;
+              }
+              li{
+                  list-style-type: none;
+              }
+              a{
+                  line-height: 2;
+                  width: 5px;
+                  text-decoration: none;
+                   }
+              a:hover{
+                  cursor: pointer;
+                  background-color: greenyellow;
+                  color: red;
+                  border: 3px solid white;
+                  margin: auto;
+                  padding: auto;      
+              }
+              .drop{
+                  position: relative;
+                  display: block;
+              }
+          .dropCntnt{
+              display: none;
+              position: absolute;
+              z-index: 1;
+          }
+           .drop:hover .dropCntnt{
+               display: block;
+               width: 50px;
+               left: 75px;
+               top: 5px;
+           }
+           .dropCntnt a{
+               background-color: tomato;
+               padding:  5px;
+           }
+           .dropCntnt:hover{
+               background-color: orange;
+           }
+          
+              
         </style>
     </head>
     <body>
+        <ul class="ll"> 
+             NAVbar
+            <li class="drop" >
+             <a href="">MENU </a>
+                 <div class="dropCntnt">
+                     <a href="">Home</a>
+                     <a href="">Home</a>
+                     <a href="">Home</a>
+                 </div>
+            </li>
+                <li><a href="">HOME</a></li> 
+                <li><a href="">CONTACT</a></li>
+               <li> <a href="">Email</a></li>
+        </ul>
        <article>
         <div class="center">
             <h1 class="id">

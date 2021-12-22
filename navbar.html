@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar Work</title>
+    <style>
+        .nav{
+               list-style-type: none;
+               display: flex;
+               justify-content: space-around;
+               background-color: black;
+               border: 3px solid red;
+               padding: 10px 10px;
+               margin: 20px 20px;
+               text-decoration: none;
+               position: sticky;
+        }
+        a:hover{
+            background-color: pink;
+            border: 3px solid white;
+            cursor: pointer;
+            padding: 2px 2px;
+        }
+        .para{
+            display: inline;
+            color: saddlebrown;
+            font-size: 30px;
+            font-weight: bolder;
+        }
+        li{
+            font-size: 20px;
+            padding-top: 40px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .drop{
+            display: block;
+            position: relative;
+        }
+        .dropc{
+            display: none;
+            position: absolute;
+            background-color: yellow;
+            padding: 5px 5px;
+        }
+        .drop:hover .dropc{
+            display: block;
+        }
+        .side{
+            list-style-type: none;
+            border: 3px solid green;
+            padding: 20px 20px;
+            width: 10%;
+            margin-top: 100px;
+            background-color: black;
+            overflow: hidden;
+        }
+        .sidedrop{
+            display: block;
+            position: relative;
+        }
+        .sidep{
+          display: none;
+          position: absolute;
+          background-color: yellow;
+        }
+        .sidedrop:hover .sidep{
+            display: block;
+            width: 50%;
+            left: 60%;
+            top: 0px;
+        }
+        .im{
+              margin: 20px 20px;
+              border: 3px solid red;
+              width: 200px;
+              float: left;
+        }
+        .dsc{
+           text-align: center;
+           border: 2px solid black;
+           padding: 2px 2px;
+        }
+        a[target]{
+            background-color: blue;
+            color: red;
+            font-size: 20px;
+            margin: 10px 10px;
+            padding: 10px 10px;
+        }
+        .cler{
+            clear: both;
+        }
+        input{
+            display: block;
+            margin: 5px 5px;
+        }
+        [name~="name"]{
+            background-color: gold;
+        }
+        .whole{
+            background-color: gray;
+            width: 50%;
+            height: 600px;
+            padding: 20px 20px;
+            margin-left: 25%;
+              margin-top: 10%;
+              margin-bottom: 10%;
+         }
+        input[type="text"]{
+            background-color: yellow;
+        }
+        label{ 
+            display: inline-block;
+            padding: 20px 20px;
+            justify-content: left;
+            margin: 1px 1px;
+            width: 25%;
+        }
+        input[type="text"], select , textarea {
+         width: 75%;
+         padding: 10px;
+         border: 2px solid black;
+         float: right;
+         display: inline-block;
+         margin: 1px 1px;
+            }
+            input[type="submit"]{
+         background-color: #16eb1d;
+            color: white;
+             padding: 12px 20px;
+             border: none;
+             width: 25%;
+             float: right;
+              cursor: pointer;
+              margin-top: 5px;
+            }
+            .lcer{
+                clear: both;
+            }
+                 
+    </style>
+</head>
+<body>
+    <ul class="nav">
+        <p class="para">Elon Mask</p>
+        <li><a href="/Assignment-1/elon.html">Elon</a></li>
+        <li class="drop"><a href="/Assignment-1/main.html">Main</a>
+        <p class="dropc">
+            <a href="/Assignment-1/elon.html">Elon</a>
+            <a href="/Assignment-1/Tesla.html">Tesla</a>
+        </p>
+        </li>
+        <li><a href="/Assignment-1/Tesla.html">Tesla</a></li>
+    </ul>
+    <ul class="side">
+              <p class="para"> NavBar</p>
+              <li><a href="/Assignment-1/elon.html">Elon</a></li>
+              <li class="sidedrop"><a href="/Assignment-1/main.html">Main</a>
+            <p class="sidep">
+                <a href="/Assignment-1/elon.html">Elon</a>
+                <a href="/Assignment-1/Tesla.html">Tesla</a>
+            </p>
+            </li>
+              <li><a href="/Assignment-1/Gallery.html">Gallery</a></li>
+    </ul>
+    <hr>
+    <a href="/margin.html" target="_blank">Margin</a>
+
+    <hr>
+    <div class="im">
+        <a href="/images/laptop.jpg">
+            <img src="/images/laptop.jpg" alt="" height="200" width="200">
+        </a>
+        <div class="dsc">This is a laptop pic</div>
+    </div>
+    <div class="im">
+                   <a href="/images/assist.jpg">
+                       <img src="/images/assist.jpg" alt="" height="200" width="200">
+                   </a>
+                   <div class="dsc">This is assist pic</div>
+    </div>
+    <div class="im">
+        <a href="/Assignment-1/Elon.jpg">
+            <img src="/Assignment-1/Elon.jpg" alt="" height="200" width="200">
+        </a>
+        <div class="dsc"> This is ELON</div>
+    </div>
+    <div class="im"> <a href="/Assignment-1/Space.jpg">
+        <img src="/Assignment-1/Space.jpg" alt="" height="200" width="200">
+    </a>
+    <div class="dsc"> This is Space</div>
+    </div>
+    <div class="im">
+        <a href="/Assignment-1/tesla.jpg">
+            <img src="/Assignment-1/tesla.jpg" alt="" height="200" width="200">
+        </a>
+        <div class="dsc"> This is Tesla</div>
+    </div>
+    <div class="cler"></div>
+    <hr>
+    <hr>
+    <input type="text" name="name" id="" placeholder="First Name">
+    <input type="text" name="name" id="" placeholder="Last Name">
+    <input type="text" name="Phone" id="" placeholder="Phone">
+    <div class="lcer"></div>
+    <hr>
+    <hr>
+    <div class="whole">
+        <form action="">
+             <label for="">First Name</label>
+            <input type="text" name="fname" id="" placeholder="First Name">
+            <br>
+            <label for="">Last Name</label>
+            <input type="text" name="" id="" placeholder="Last Name">
+            <br>
+            <label for="">Country</label>
+            <br>
+                <select name="" id="">
+                    <option value="">Pakstan</option>
+                    <option value="">India</option>
+                    <option value="">Sweden</option>
+                    <option value="">USA</option>
+                </select>
+                <br>
+                <label for="">Comments</label>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Comment us"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class="lcer"></div>
+</body>
+</html>

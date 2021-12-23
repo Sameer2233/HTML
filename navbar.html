@@ -53,10 +53,13 @@
             border: 3px solid green;
             padding: 20px 20px;
             width: 10%;
-            margin-top: 100px;
+            margin-top: 1px;
             background-color: black;
             overflow: hidden;
-        }
+            position: absolute;
+            height: 290px;
+            margin-left: 2%;
+        }       }
         .sidedrop{
             display: block;
             position: relative;
@@ -66,17 +69,24 @@
           position: absolute;
           background-color: yellow;
         }
+        ::selection{
+            background-color: red;
+            color: black;
+        }
         .sidedrop:hover .sidep{
             display: block;
-            width: 50%;
-            left: 60%;
-            top: 0px;
+            width: 5%;
+            left: 7%;
+            top: 320px;
         }
         .im{
               margin: 20px 20px;
               border: 3px solid red;
               width: 200px;
-              float: left;
+              float: right;
+              position: relative;
+              margin-top: 30%;
+              margin-right: 3%;
         }
         .dsc{
            text-align: center;
@@ -123,9 +133,8 @@
          width: 75%;
          padding: 10px;
          border: 2px solid black;
-         float: right;
-         display: inline-block;
          margin: 1px 1px;
+         display: inline-block;
             }
             input[type="submit"]{
          background-color: #16eb1d;
@@ -140,7 +149,19 @@
             .lcer{
                 clear: both;
             }
-                 
+         .aside{
+             background-color: black;
+             padding: 10px 10px;
+             border: 3px solid green;
+             width: 70%;
+             float: right;
+             color: blue;
+             height: 300px;
+             position: absolute;
+             display: inline;
+             margin-left: 20%;
+             overflow: scroll;
+                     }  
     </style>
 </head>
 <body>
@@ -166,10 +187,10 @@
             </li>
               <li><a href="/Assignment-1/Gallery.html">Gallery</a></li>
     </ul>
-    <hr>
-    <a href="/margin.html" target="_blank">Margin</a>
-
-    <hr>
+    <section class="aside">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et repellendus voluptatum ullam provident doloremque inventore excepturi ea debitis voluptas sapiente, corrupti officia. Eaque quae officia recusandae consectetur necessitatibus error. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa quae, dolore cum quisquam nemo alias quas iure ab ipsum commodi architecto amet quo ducimus autem enim voluptas nihil minima debitis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed provident error cumque dolor voluptas voluptatibus facilis esse numquam, adipisci ipsam dolorem sapiente illo recusandae tempore quod veniam repudiandae? Voluptate, doloribus! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate iste tenetur saepe perferendis iure. Suscipit dolorem ipsam facilis aliquam officiis illo soluta nobis quidem excepturi, sit minima alias? Ipsum, facilis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eaque at error in maxime doloremque expedita totam perferendis? Eligendi doloribus vitae nostrum id repellendus inventore ratione sint voluptates molestias. Cum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam natus perferendis soluta quos nobis corporis ducimus, suscipit laborum distinctio illo voluptate maxime et, dolorem explicabo nihil, sequi repellat? Esse, reiciendis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptate incidunt ullam minus, molestias illum mollitia reprehenderit perspiciatis magnam, voluptates nihil doloribus rerum quidem aliquid cupiditate culpa! Magnam, harum autem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi dolor nisi qui deleniti, expedita vitae hic nam voluptatum eum delectus, quia minus ut alias! Id commodi ut labore aperiam sint. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati dolorum debitis ea nemo? Tempore molestias sint sequi, veniam animi incidunt ea natus, similique itaque veritatis culpa officia? Dignissimos, fugiat architecto. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur, nesciunt. Tempore quasi distinctio voluptatibus neque et placeat tempora ex asperiores repudiandae, animi quisquam nemo impedit optio dolor pariatur non ipsa!
+    </section>
+    <div class="lcer"></div>
     <div class="im">
         <a href="/images/laptop.jpg">
             <img src="/images/laptop.jpg" alt="" height="200" width="200">
@@ -197,15 +218,9 @@
         <a href="/Assignment-1/tesla.jpg">
             <img src="/Assignment-1/tesla.jpg" alt="" height="200" width="200">
         </a>
-        <div class="dsc"> This is Tesla</div>
+        <div class="dsc">This is Tesla Pic</div>
     </div>
     <div class="cler"></div>
-    <hr>
-    <hr>
-    <input type="text" name="name" id="" placeholder="First Name">
-    <input type="text" name="name" id="" placeholder="Last Name">
-    <input type="text" name="Phone" id="" placeholder="Phone">
-    <div class="lcer"></div>
     <hr>
     <hr>
     <div class="whole">

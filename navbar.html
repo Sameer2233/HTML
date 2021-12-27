@@ -16,6 +16,7 @@
                margin: 5px 20px;
                text-decoration: none;
                position: sticky;
+               box-shadow: 10px 10px blue inset;
         }
         a:hover{
             background-color: pink;
@@ -50,7 +51,10 @@
         }
         .side{
             list-style-type: none;
-            border: 3px solid green;
+            border: 10px solid transparent;
+            border-image: url(/images/laptop.jpg);
+            border-image-repeat: round;
+            border-image-width: 10%;
             padding: 20px 20px;
             width: 10%;
             margin-top: 1px;
@@ -151,7 +155,6 @@
                 clear: both;
             }
          .aside{
-             background-color: black;
              padding: 10px 10px;
              border: 3px solid green;
              width: 70%;
@@ -163,6 +166,9 @@
              margin-left: 20%;
              overflow: scroll;
              margin-top: 20px;
+             background-image: -moz-linear-gradient(red yellow);
+             text-shadow: 2px 2px 5px red;
+             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                      }  
     </style>
 </head>

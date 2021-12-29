@@ -97,7 +97,7 @@
          background-color: rgb(126, 223, 139);
          color: black;
          padding: 10px 10px;
-         margin: 0px 90px;
+         margin: 200px 90px;
          text-shadow: 2px 2px 2px gray;
          box-shadow: 2px 5px purple;
          transform: matrix(1, 2, -1, 1, 80, 80);
@@ -109,7 +109,7 @@
          color: black;
          padding: 10px 10px;
          text-shadow: 2px 2px 2px gray;
-         box-shadow: 2px 5px: green;
+         box-shadow: 2px 5px green;
          float: right;
          margin: 20% 20%;
         }
@@ -126,7 +126,6 @@
          padding: 10px 10px;
          text-shadow: 2px 2px 2px gray;
          box-shadow: 2px 5px: green;
-         float: right;
          margin: 20% 10%;
          animation-name: div;
          animation-duration: 3s;
@@ -134,6 +133,7 @@
       animation-timing-function: linear;
       animation-direction: alternate;
       position: absolute;
+      float: right;
          
         }
         @keyframes div{
@@ -141,14 +141,20 @@
           100%{background-color: chartreuse; left: 800px; top: 800px; }
         }
         image{
-        object-fit: fill;
+        object-fit: contain;
         height: 200px;
         width: 200px;
         opacity: 5;
         }
         .svg{
             position: absolute;
-            top: 500%;
+            top: 125%;
+            left: 10%;
+        }
+        .svg2{
+            position: absolute;
+            top: 150%;
+            left: 10%;
         }
     </style>
 </head>
@@ -182,14 +188,19 @@
 <div class="div6">
              this is animation
 </div>
-<svg>
-    <svg class="svg" width="500" height="500">
+
+    <svg class="svg" width="200" height="200">
         <mask id="mask">
-            <circle cx="100" cy="100" r="100" stroke="green" stroke-width="4" fill="white"/>
+            <circle cx="100" cy="100" r="100" stroke="green" stroke-width="4" fill="white"></circle>
         </mask>
-        <image href="/images/laptop.jpg" mask="url(#mask)"></image>
-    </svg>
-      </svg>
-</svg>
+        <image href="/Assignment-1/Elon.jpg" mask="url(#mask)"></image>
+    </svg>   
+    <svg class="svg2" height="200" width="200">
+        <mask id="mask2">
+                <rect x="5" y="5" rx="90" ry="90" width="200" height="200"
+                style="fill:white;stroke:black;stroke-width: 5px;" />
+        </mask>
+             <image href="images/flw.jpg" mask="url(#mask2)"></image>
+    </svg> 
 </body>
 </html>

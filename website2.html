@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>usersnap</title>
-    <link rel="icon" href="/Assignment-1/tesla.jpg">
+    <link rel="icon" href="/images/insta.jpg">
     <style>
-        @media screen {
+        @media screen and (min-width: 480px) {
                 body{
-                    width: max-content;
+                    width: fit-content;
                 }           
 } 
 body{
@@ -31,6 +31,13 @@ body{
             left: 0%;
             position: absolute;
             bottom: 3px;
+            animation-name: user;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes user{
+            from {color:black;}
+              to {color:red;}
         }
         a{
             color: black;

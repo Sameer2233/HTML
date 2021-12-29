@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        body{
+            position: relative;
+        }
+        .div1{
+         width: 100px;
+         height: 50px;
+         background-color: rgb(126, 223, 139);
+         color: black;
+         padding: 10px 10px;
+         margin: 10px 10px;
+         text-shadow: 2px 2px 2px gray;
+         box-shadow: 2px 5px red;
+         text-align: center;
+         transform: translate(50px, 2px);
+        }
+        .div2{
+         width: 100px;
+         height: 50px;
+         background-color: rgb(126, 223, 139);
+         color: black;
+         padding: 10px 10px;
+         margin: 50px 50px;
+         text-shadow: 2px 2px 2px gray;
+         box-shadow: 2px 5px gray;
+         text-decoration: greenyellow;
+         transform: rotate(50deg);
+         transition:  width 2s, height 2s, transform 2s;
+        }
+        .div2:hover{
+                    width: 200px;
+                    height: 200px;
+                    transform: rotate(180deg);
+        }
+        .div3{
+            width: 100px;
+         height: 50px;
+         background-color: rgb(126, 223, 139);
+         color: black;
+         padding: 10px 10px;
+         margin: 50px 90px;
+         text-shadow: 2px 2px 2px gray;
+         box-shadow: 2px 5px purple;
+        }
+        .nav{
+            background-color: red;
+            padding: 10px 10px;
+            position: absolute;
+            top: 0%;
+            left: 100%;
+             visibility: hidden;
+            z-index: 999;
+        }
+        .div3:hover{
+         transform: scale(2, 1);
+         transition:  4s;
+         transition-delay: 1s;
+         transition-duration: 2s;
+         cursor: wait;
+         transition-timing-function: ease-out;  
+        }
+         .div3:hover .nav{
+                visibility: visible;
+        }
+        .p1{
+            width: 100px;
+         height: 50px;
+         background-color: rgb(126, 223, 139);
+         color: black;
+         padding: 10px 10px;
+         margin: 0px 90px;
+         text-shadow: 2px 2px 2px gray;
+         box-shadow: 2px 5px purple;
+         transform: skewX(10deg);
+         transform: skewY(30deg);
+        }
+        .div4{
+            width: 100px;
+         height: 50px;
+         background-color: rgb(126, 223, 139);
+         color: black;
+         padding: 10px 10px;
+         margin: 70px 90px;
+         text-shadow: 2px 2px 2px gray;
+         box-shadow: 2px 5px purple;
+        }
+        .p2{
+            width: 100px;
+         height: 50px;
+         background-color: rgb(126, 223, 139);
+         color: black;
+         padding: 10px 10px;
+         margin: 0px 90px;
+         text-shadow: 2px 2px 2px gray;
+         box-shadow: 2px 5px purple;
+         transform: matrix(1, 2, -1, 1, 80, 80);
+        }
+        .div5{
+            width: 100px;
+         height: 50px;
+         background-color: rgb(126, 223, 139);
+         color: black;
+         padding: 10px 10px;
+         text-shadow: 2px 2px 2px gray;
+         box-shadow: 2px 5px: green;
+         float: right;
+         margin: 20% 20%;
+        }
+        .div5:hover{
+            transform: rotateX(150deg);
+            transform: rotateY(150deg);
+            transform: rotateZ(90deg);
+        }
+        .div6{
+            width: 100px;
+         height: 50px;
+         background-color: rgb(126, 223, 139);
+         color: black;
+         padding: 10px 10px;
+         text-shadow: 2px 2px 2px gray;
+         box-shadow: 2px 5px: green;
+         float: right;
+         margin: 20% 10%;
+         animation-name: div;
+         animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      animation-direction: alternate;
+      position: absolute;
+         
+        }
+        @keyframes div{
+          10%{background-color: red; left: 200px; top: 200px; }
+          100%{background-color: chartreuse; left: 800px; top: 800px; }
+        }
+        image{
+        object-fit: fill;
+        height: 200px;
+        width: 200px;
+        opacity: 5;
+        }
+        .svg{
+            position: absolute;
+            top: 500%;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+           This is 1st div
+    </div>
+    <hr>
+    <div class="div2">
+        This is 2st div
+ </div>
+ <hr>
+ <div class="div3">
+    This is 3st div
+    <p class="nav">
+        that's div
+    </p>
+</div>
+<p class="p1">
+    this is shew
+</p>
+<div class="div4  ">
+        This is  4th
+</div>
+<p class="p2">
+    this is matrics
+</p>
+<div class="div5">
+    this is 5th
+</div>
+<div class="div6">
+             this is animation
+</div>
+<svg>
+    <svg class="svg" width="500" height="500">
+        <mask id="mask">
+            <circle cx="100" cy="100" r="100" stroke="green" stroke-width="4" fill="white"/>
+        </mask>
+        <image href="/images/laptop.jpg" mask="url(#mask)"></image>
+    </svg>
+      </svg>
+</svg>
+</body>
+</html>

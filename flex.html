@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Work</title>
+</head>
+<style>
+    :root{
+        --padding: 20px;
+    }
+    .cont{
+        display: flex;
+        margin: 20px 10px;
+        outline-offset: 5px;
+        outline-style: solid;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 400px;
+    }
+    .cont div{
+        background-color: tomato;
+        padding: var(--padding);
+        box-sizing: border-box;
+        border: 2px solid gold;
+        margin: 5px;
+      
+    }
+    .cont2{
+        display: flex;
+        margin: 20px 10px;
+        outline-offset: 5px;
+        outline-style: solid;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+     /*   align-items: flex-end;*/
+        height: 600px;
+     align-items: center;
+    }
+    .cont2 div{
+        background-color: tomato;
+        padding: var(--padding);
+        box-sizing: border-box;
+        border: 2px solid gold;
+        margin: 5px;
+        width: 50%;        
+    }
+    .cont3{
+        display: flex;
+        margin: 20px 10px;
+        outline-offset: 5px;
+        outline-style: solid;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: baseline;
+        height: 400px;
+        align-content: center;
+    }
+    .cont3 div{
+        background-color: tomato;
+        padding: var(--padding);
+        box-sizing: border-box;
+        border: 2px solid gold;
+        margin: 5px;
+        
+    }
+
+</style>
+<body>
+    <div class="cont">
+        <div class="box">
+            <h3>Box 1</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="box">
+            <h3>Box 2</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+            <h3 class="box">Box 3</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>   
+        <div>
+            <h3 class="box"> Box4            </h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+            <h3 class="box"> Box5            </h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    <div class="cont2">
+        <div class="box">
+            <h3>Box 1</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="box">
+            <h3>Box 2</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+            <h3 class="box">Box 3</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>   
+        <div>
+            <h3 class="box"> Box4            </h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    <div class="cont3">
+        <div class="box">
+            <h3>Box 1</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="box">
+            <h3>Box 2</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+            <h3 class="box">Box 3</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>   
+        <div>
+            <h3 class="box"> Box4            </h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+            <h3 class="box"> Box5            </h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+    
+</body>
+</html>

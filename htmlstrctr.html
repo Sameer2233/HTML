@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        :root{
+            --padding: 5px;
+            --margin: 5px;
+            --text-align: center;
+        }
+        .div1{
+            background-color: rgb(218, 233, 6);
+            padding: var(--padding);
+            margin: var(--margin);
+            text-align: var(--text-align);
+            border: 2px solid red;
+            height: 120px;
+            flex: 50%;
+        }
+        .div2{
+            background-color: rgb(0, 128, 122);
+            padding: var(--padding);
+            margin: var(--margin);
+            text-align: var(--text-align);
+            border: 2px solid red;
+            height: 120px;
+            flex: 50%;
+
+        }
+        .div3{
+            border: 2px solid red;
+            background-color: purple;
+            text-align: var(--text-align);
+            padding: var(--padding);
+            margin: var(--margin);
+            width: 30%;
+            overflow: scroll;
+            float: left;
+            resize: both;
+        }
+        .div4{
+            border: 2px solid red;
+            background-color: rgb(0, 128, 90);
+            text-align: var(--text-align);
+            padding: var(--padding);
+            margin: var(--margin);
+            width: 30%;
+            overflow: scroll;
+            resize: both;
+        }
+        .div5{
+            border: 2px solid red;
+            background-color: rgb(4, 128, 0);
+            text-align: var(--text-align);
+            padding: var(--padding);
+            margin: var(--margin);
+            width: 60%;
+            float: right;
+            height: 500px;
+            overflow: scroll;
+            resize: both;
+        }
+        .div6{
+            background-color: rgb(0, 13, 128);
+            padding: var(--padding);
+            margin: var(--margin);
+            text-align: var(--text-align);
+            border: 2px solid red;
+            height: 80px;
+        }
+        .cont{
+        }
+        @media screen and (max-width: 800px) {
+            .cont{
+            display: flex;
+                flex-direction: column;
+            }
+        }
+   /*  .cont{
+            display: flex;
+            flex-flow: column;
+        }
+        .cont>*{
+            flex: 1 100%;
+        }*/
+        @media screen and (max-width: 800px) {
+            .div1{
+                order: 1;
+            }
+            .div2{
+                order: 2;
+            }
+            .div3{
+                order: 3;
+                width: 100%;
+            }
+            .div4{
+                order: 3;
+                width: 100%;
+
+            }
+            .div5{
+                order: 5;
+                width: 100%;
+
+            }
+            .div6{
+                order: 6;
+            }
+}
+    </style>
+</head>
+<body>
+    <div class="cont">
+    <div class="div1"> 
+        <h2>HTML</h2>
+    </div>
+    <div class="div2"> 
+        <h2>Nav</h2>
+    </div>
+
+<div class="div5">
+    <h3>aside</h3>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa dolorum aliquam dicta numquam, saepe architecto! Earum perspiciatis iure illo? Modi, excepturi molestias distinctio nisi consectetur consequatur alias magni dignissimos dicta.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa dolorum aliquam dicta numquam, saepe architecto! Earum perspiciatis iure illo? Modi, excepturi molestias distinctio nisi consectetur consequatur alias magni dignissimos dicta. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa dolorum aliquam dicta numquam, saepe architecto! Earum perspiciatis iure illo? Modi, excepturi molestias distinctio nisi consectetur consequatur alias magni dignissimos dicta. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa dolorum aliquam dicta numquam, saepe architecto! Earum perspiciatis iure illo? Modi, excepturi molestias distinctio nisi consectetur consequatur alias magni dignissimos dicta. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa dolorum aliquam dicta numquam, saepe architecto! Earum perspiciatis iure illo? Modi, excepturi molestias distinctio nisi consectetur consequatur alias magni dignissimos dicta. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa dolorum aliquam dicta numquam, saepe architecto! Earum perspiciatis iure illo? Modi, excepturi molestias distinctio nisi consectetur consequatur alias magni dignissimos dicta.
+    </p>
+</div>
+    <div class="div3">
+        <h3>HTML</h3>
+        <h4>Section</h4>
+        <h5>Nav</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, iste, cumque natus nemo facere velit ullam quaerat dolore aliquid ducimus soluta eum cum in odit commodi pariatur accusantium, ipsum fugiat.</p>
+    </div>
+    <div class="div4">
+        <h3>HTML</h3> 
+        <h4>Section</h4>
+        <h5>Nav</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, iste, cumque natus nemo facere velit ullam quaerat dolore aliquid ducimus soluta eum cum in odit commodi pariatur accusantium, ipsum fugiat.</p>
+    </div>
+   
+    <div class="div6"> 
+        <h2>Footer</h2>
+</div>
+</div>
+
+
+</body>
+</html>

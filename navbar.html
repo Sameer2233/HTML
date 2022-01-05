@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NavBar Work</title>
     <style>
+        :root{
+            --padding: 20px;
+        }
+        @media screen and (max-width: 450px) {
+                    body, .aside, .side{
+                        display: flex;
+                        flex-direction: column;
+                    }
+        }
         .nav{
                list-style-type: none;
                display: flex;
@@ -56,16 +65,19 @@
             border-image: url(/images/laptop.jpg);
             border-image-repeat: round;
             border-image-width: 10%;
-            padding: 20px 20px;
+            padding: var(--padding);
             width: 10%;
             margin-top: 1px;
+            outline-offset: 5px;
+            outline-style: solid;
+            outline-color: rgb(155, 89, 2);
             background-color: black;
             overflow: hidden;
             position: absolute;
             height: 290px;
             background-image: radial-gradient(circle, pink, gray);
             margin-left: 2%;
-        }       }
+        }       
         .sidedrop{
             display: block;
             position: relative;
@@ -169,6 +181,12 @@
              overflow: scroll;
              margin-top: 20px;
              background-image: linear-gradient( green, yellow);
+             column-count: 3;
+             column-gap: 50px;
+             resize: both;
+             column-rule-style: dashed;
+             column-rule-color: rgb(236, 100, 134);
+             column-rule-width: 10px;
              text-shadow: 2px 2px 5px red;
              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
                      }  

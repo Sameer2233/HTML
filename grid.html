@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Work</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        [class*="col"]{
+            border: 3px solid yellow;
+            float: left;
+            padding: 20px;
+            background-color: purple;
+            overflow: hidden;
+        }
+      
+        .col1 {width: 8.33%;}
+        .col2 {width: 16.66%;}
+        .col3 {width: 25%;}
+        .col4 {width: 33.33%;}
+        .col5 {width: 41.66%;}
+        .col6 {width: 50%;}
+        .col7 {width: 58.33%;}
+        .col8 {width: 66.66%;}
+        .col9 {width: 75%;}
+        .col10 {width: 83.33%;}
+        .col11 {width: 91.66%;}
+        .col12 {width: 100%;}
+
+        @media screen and (max-width: 800px){
+           .colm12 {
+                width: 100%;
+                        }
+        }
+    </style>
+</head>
+<body>
+    <div class="gird">
+        <div class="col6 colm12">
+            <h1>1</h1>
+        </div>
+        <div class="col6 colm12">
+            <h1>2</h1>
+        </div>
+        <div class="col1 colm12">
+            <h1>3</h1>
+        </div>
+        <div class="col1 colm12">
+            <h1>4</h1>
+        </div>
+        <div class="col1 colm12">
+        <h1>5</h1> 
+           </div>
+         <div class="col1 colm12">
+         <h1>6</h1>
+        </div>
+        <div class="col1 colm12">
+            <h1>7</h1>
+        </div>
+        <div class="col1 colm12">
+            <h1>8</h1>
+        </div>
+        <div class="col1 colm12">
+            <h1>9</h1>
+        </div>
+        <div class="col1 colm12">
+            <h1>10</h1>
+        </div>
+        <div class="col1 colm12">
+            <h1>11</h1>
+        </div>
+        <div class="col1 colm12">
+            <h1>12</h1>
+        </div>
+    </div>
+</body>
+</html>

@@ -11,12 +11,21 @@
         }
         [class*="col"]{
             border: 3px solid yellow;
-            float: left;
             padding: 20px;
             background-color: purple;
             overflow: hidden;
         }
-      
+        .gird{
+            border: 2px solid red;
+            padding: 20px 20px;
+            margin-top: 10px;
+            display: grid;
+         grid-template-columns: auto auto auto auto;
+         column-gap: 20px;
+         row-gap: 20px;
+         justify-content: space-around;
+         align-content: center;
+        }
         .col1 {width: 8.33%;}
         .col2 {width: 16.66%;}
         .col3 {width: 25%;}
@@ -30,11 +39,11 @@
         .col11 {width: 91.66%;}
         .col12 {width: 100%;}
 
-        @media screen and (max-width: 800px){
+        /* @media screen and (max-width: 800px){
            .colm12 {
                 width: 100%;
                         }
-        }
+        } */
     </style>
 </head>
 <body>

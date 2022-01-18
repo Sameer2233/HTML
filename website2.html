@@ -7,12 +7,7 @@
     <title>usersnap</title>
     <link rel="icon" href="/images/insta.jpg">
     <style>
-        @media screen and (min-width: 450px){
-                body{
-                    width: fit-content;
-                    flex-direction: column; 
-                }   
-} 
+     
 body{
     position: relative;
 }
@@ -199,6 +194,12 @@ body{
         .link{
             display: inline;
             padding: 10px;
+        }
+        @media screen and (max-width: 480px) {
+            body{
+            display: flex;
+                flex-direction: column;
+            }
         }
     </style>
 </head>

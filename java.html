@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Work</title>
+    <style>
+        button{
+            padding: 5px 5px;
+            text-align: center;
+            margin-left: 50%;
+            background-color: red;
+            border: 3px solid gold;
+            color: gray;
+        }
+        h1{
+            margin-left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Example 1</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, nulla aperiam. Similique sapiente dolorem, totam, eos facilis vitae expedita itaque est veniam excepturi repellat eligendi! Architecto magnam dolore ipsa est!</p>
+    <p id="id" > </p>
+    <script>
+        document.getElementById("id").innerHTML="iuyfghbjdklms";
+    </script>
+     <hr>
+     <h1>Example 2</h1>
+     <p id="ls">
+         Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias voluptate voluptatem, tempora dolore molestias, reprehenderit rem ut explicabo, nisi tempore harum esse earum placeat ipsam quae? Magnam odit et quam?
+        </p>
+     <button type="button" onclick='document.getElementById("ls").innerHTML="iuytrewsdfxcghjuj7y67tredfgh"'>Click Me</button>
+  <hr>
+  <h1>Example 3</h1>
+  <p id="demo1" >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi obcaecati explicabo deserunt vitae tempore ullam accusantium sed tenetur at alias, iste officia recusandae nihil, dicta laborum consequatur eum aliquam dolorum!
+  </p>
+  <button type="button" onclick="document.getElementById('demo1').style.fontSize='37px' ">Try Me!</button>
+  <hr>
+  <h1>Example 4</h1>
+  <button onclick="document.getElementById('demo3').innerHTML= Date() " >
+      Click me to display date and time</button>
+  <p id="demo3"></p>
+  <button onclick="document.getElementById('demo3').style.display='none' " >Click me to hide</button>
+  <hr>
+  <h1>Example 5</h1>
+  <button onclick="document.getElementById('demo2').style.display='block' " >
+    Click Me to show Content
+</button>
+<br>
+  <p id="demo2" style="display: none;" > Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil architecto voluptate eveniet dignissimos sapiente, quo illo libero error quaerat maxime cum? Voluptas eius accusantium tenetur tempore aspernatur voluptatem eaque nemo.</p>
+  <br>
+  <button onclick="document.getElementById('demo2').style.display='none' " >
+      Click Me to hide Content
+  </button>
+  <hr>
+  <h1>Example 6</h1>
+  <button onclick="document.getElementById('img').src='images/bulb2.gif'" >Turn me ON</button>
+<br>
+  <img id="img" src="/images/bulb.gif" style="width: 100px; margin-left: 50%;">
+<br>
+  <button onclick="document.getElementById('img').src='images/bulb.gif'" >Turn me OFF</button>
+  <hr>
+</body>
+</html>

@@ -94,7 +94,7 @@
  <p>Here is Demo</p>
  <p id="p2"></p>
  <script>
-     let a, b, c;
+    // let a, b, c;
      a=5; b=6; c=a+b;
      document.getElementById("p2").innerHTML= "the value of c is "+ c +"." ;
  </script>
@@ -105,6 +105,43 @@
 <script>
     let x = 2 + 6 + "6";
     document.getElementById("p3").innerHTML= x ;
+</script>
+<hr>
+<h1>Example 12</h1>
+<p>Explaining about let</p>
+<p id="p4"></p>
+<script>
+    let a=2;
+    {
+        let a=3;
+    }
+    {
+        let a=4;
+    }
+   // document.getElementById("p4").innerHTML=a;
+   document.write(a);
+</script>
+<hr>
+<h1>Example 13</h1>
+<p>It's about const</p>
+<p id="p5"></p>
+<script>
+   const car=["a", "b", "c", "d"];
+    car[0]="f";
+    car.push("Audi");
+    document.getElementById("p5").innerHTML=car;
+</script>
+<hr>
+<h1>Example 14</h1>
+<p>Its about const 2 Eample</p>
+<p id="p6"></p>
+<script>
+{
+const car={type:"2011", model:"tayota"};
+car.model="carolla";
+car.owner="Saoiu";
+document.write("Car owner is"+ " " +car.owner);
+}
 </script>
 
 </div>

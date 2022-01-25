@@ -62,12 +62,13 @@
                    document.write("Bye");
                }
            </script>
+           <hr>
            <h6>OR Example</h6>
            <script>
                           var a=30;
                b=20;
                if((a>b) | (a=b)){
-                   document.write("<br>");
+                   document.write(" ");
                    document.write("Hello")
                } else{
                 document.write("<br>");
@@ -104,7 +105,93 @@
                document.write("Bye");
             }
            </script>
-    </div>
+           <hr>
+           <h1>Example2</h1>
+           <input type="number" onchange="get()" id="p1">
+           <input type="number" onchange="get()" id="p2">
+            
+           <h2 id="h1">00</h2>
+           <h2 id="h2">00</h2>
+           <h2 id="h3">00</h2>
+           <h2 id="h4">00</h2>
+                   
+         <button onclick="h1()">Add</button>
+         <button onclick="h2()">Sub</button>
+         <button onclick="h3()">Mul</button>
+         <button onclick="h4()">divi</button>
+
+         <script>
+            var a=0;
+            var b=0;
+            function get(){
+              a=document.getElementById("p1").value;
+              b=document.getElementById("p2").value;
+              add(a,b);
+              sub(a,b);
+              mul(a,b);
+              dv(a,b);
+            }
+            function add(a,b){
+                var  sum = parseInt(a) + parseInt(b);
+               document.getElementById("h1").innerHTML=sum;
+            }
+
+            function sub(a,b){
+                var  sub = parseInt(a) - parseInt(b);
+               document.getElementById("h2").innerHTML=sub;
+            }
+
+            function mul(a,b){
+                var  mul = parseInt(a) * parseInt(b);
+               document.getElementById("h3").innerHTML=mul;
+            }
+
+            function dv(a,b){
+                var  dv = parseInt(a) / parseInt(b);
+               document.getElementById("h4").innerHTML=dv;
+            }
+         </script>
+             <hr>  
+             <h1>Example3</h1>
+             <p id="para1"></p> 
+             <script>
+                 const person=[
+                     {
+                         firstName:"John",
+                         LastName:"Doe",
+                         age:30,
+                         id:555,
+                     },
+                    
+                     {
+                         firstName:"ibra",
+                         LastName:"him",
+                         age:60,
+                         id:552345645,
+                     }, 
+
+                     {
+                         firstName:"Jani",
+                         LastName:"Doni",
+                         age:36,
+                         id:559875,
+                     }, 
+                 ];
+                document.getElementById("para1").innerHTML=
+                person[2].firstName+
+                " "+
+                person[2].LastName+
+                " "+
+                 "is" +
+                 " "+
+                 person[2].age+
+                 " "+
+                 "years old. His Id is"+
+                 " "+
+                 person[2].id+".";
+             </script>
+</div>
+        </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

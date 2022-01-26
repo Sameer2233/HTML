@@ -12,7 +12,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="git()" >
     <div class="container">
         <h1>
             Example1
@@ -189,7 +189,103 @@
                  "years old. His Id is"+
                  " "+
                  person[2].id+".";
+            //     var details=
+            //     <pre>
+            //          firstName: ${person[1].firstName}
+            //          LastName: ${person[1].LastName}
+            //          age: ${person[1].age}
+            //          id: ${person[1].id}
+            //  </pre>
+            //      document.write("details");
              </script>
+             <hr>
+             <h1>Example 4</h1>
+             <button onclick="this.innerHTML=Date();">Click me</button>
+             <br>
+             <p id="para2"></p>
+             <button onmouseover="get()">
+                Click
+             </button>
+             <script>
+                 function get(){
+                     document.getElementById("para2").innerHTML=Date();
+                 }
+             </script>
+             <br>
+             <p id="para3"></p>
+             <button onmousedown="got()">
+                Click
+             </button>
+             <script>
+                 function got(){
+                     document.getElementById("para3").innerHTML=Date();
+                 } 
+             </script>
+             <br>
+             <p id="para4"></p>
+             <button onmouseout="git()">
+                Click
+             </button>
+             <script>
+                 function git(){
+                     document.getElementById("para4").innerHTML=Date();
+                 }
+             </script>
+             <hr>
+             <script>
+                 var words="ABCDEFDOJIFVHUBCJKD"
+                 document.write(words.length);
+             </script>
+              <hr>
+              <script>
+                  let txt= "This world is like \"Hell\" what u gonna do"
+                  let txt2="It\'s Good"
+                  let txt3="This is \\ Blackslash"
+                  let txt4= "This world is \f like Hell \v what u gonna do"
+                  document.write(txt+"<br>"+txt2+"<br>"+txt3+"<br>"+txt4);
+                  </script>
+                  <hr>
+                  <p id="para5"></p>
+                  <p id="para6"></p>
+                  <script>
+                  let txt5= "This world is like Hell what u gonna do"
+                  document.getElementById("para5").innerHTML=txt5.slice(5,19);
+                  document.getElementById("para6").innerHTML=txt5.replace("This", "Please visit")
+                  </script>
+                  <hr>
+                  <button onclick="fin()">Try me</button>
+                  <p id="para7">This world is like Hell what u gonna do</p>
+                  <button onclick="fn()">Try for lower</button>
+                  <script>
+                      
+                      function fin(){
+                   let txt6= document.getElementById("para7").innerHTML;
+                  document.getElementById("para7").innerHTML=txt6.toUpperCase();
+                      }
+                      function fn(){
+                          let txt8 =document.getElementById("para7").innerHTML;
+                          document.getElementById("para7").innerHTML=txt8.toLowerCase();
+                      }  
+                  </script>
+                  <hr>
+                  <p id="ahan">
+
+                  </p>
+                 <script>
+                     let x="This is a last location of location"
+                     document.getElementById("ahan").innerHTML=x.indexOf("location");
+                    //  let y =x.indexOf("locatoin");
+                    //  document.write(y);
+                 </script>
+                 <hr>
+                 <p
+                 id="aho"></p>
+                 <script>
+                     let xa="This is a last location of location"
+                     document.getElementById("aho").innerHTML=xa.search("last");
+                    //  let xz=xa.search(a);
+                    //  document.write(xz);
+                 </script>
 </div>
         </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

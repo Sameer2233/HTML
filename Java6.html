@@ -20,6 +20,8 @@
 <p id="p8"></p>
 <p id="p9"></p>
 <p id="p10"></p>
+<hr>
+<p id="p11"></p>
     </div>
 
     <script>
@@ -50,8 +52,47 @@ document.getElementById("p9").innerHTML=check.search("money");
 document.getElementById("p10").innerHTML=check.search("Lorem");
 
 
+const cars=[
+    {
+    name: "BMW",
+    model: "x2",
+    year: "2012",
+    number: "23445",
+    ownerName: "ishaq"
+    },
+    {
+    name: "Mersedes",
+    model: "Benz",
+    year: "2018",
+    number: "23wer345",
+    ownerName: "khika"
+    },
+    {
+    name: "volvo",
+    model: "jap",
+    year: "2020",
+    number: 24lhf445,
+    ownerName: "Akter"
+    }
+]
+// cars.push("oiufgh")
 
 
+// for(let a=0; a<3; a++){
+document.getElementById("p11").innerHTML=cars[1].ownerName;
+// }
+// document.write(cars)
+
+cars.forEach(function(value){
+    let display=`
+    <h1>${value.name}</h1>
+    <p>Model=${value.model}</p>
+    <p>Year=${value.year}</p>
+    <p>Number=${value.number}</p>
+    <p>ownerName=${value.ownerName}</p>
+    `;
+document.getElementById("p11").innerHTML+=display;
+})
     </script>
 
 </body>

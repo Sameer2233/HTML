@@ -22,6 +22,8 @@
 <p id="p10"></p>
 <hr>
 <p id="p11"></p>
+<hr>
+<p id="p12"></p>
     </div>
 
     <script>
@@ -57,21 +59,21 @@ const cars=[
     name: "BMW",
     model: "x2",
     year: "2012",
-    number: "23445",
+    number: 23445,
     ownerName: "ishaq"
     },
     {
     name: "Mersedes",
     model: "Benz",
     year: "2018",
-    number: "23wer345",
+    number: 23345,
     ownerName: "khika"
     },
     {
     name: "volvo",
     model: "jap",
     year: "2020",
-    number: 24lhf445,
+    number: 24445,
     ownerName: "Akter"
     }
 ]
@@ -93,6 +95,13 @@ cars.forEach(function(value){
     `;
 document.getElementById("p11").innerHTML+=display;
 })
+
+const carName=[ "Volvo", "Toyota", "BMW", "MG" ]
+// let carlng=carName.length;
+// for(let a=0;a<4;a++){
+    document.getElementById("p12").innerHTML=carName+"<br>";
+// }
+
     </script>
 
 </body>

@@ -24,6 +24,17 @@
 <p id="p11"></p>
 <hr>
 <p id="p12"></p>
+<hr>
+<p id="p13"></p>
+<hr>
+<p id="p14"></p>
+<p id="p15"></p>
+<p id="p16"></p>
+<p id="p17"></p>
+<p id="p18"></p>
+<p id="p19"></p>
+<p id="p20"></p>
+<p id="p21"></p>
     </div>
 
     <script>
@@ -63,7 +74,7 @@ const cars=[
     ownerName: "ishaq"
     },
     {
-    name: "Mersedes",
+    name: "mersedes",
     model: "Benz",
     year: "2018",
     number: 23345,
@@ -79,11 +90,13 @@ const cars=[
 ]
 // cars.push("oiufgh")
 
+// var data=" ";
+// data = cars[a].name+ " " +cars[a].number;
 
-// for(let a=0; a<3; a++){
-document.getElementById("p11").innerHTML=cars[1].ownerName;
-// }
-// document.write(cars)
+for(let a=0; a<cars.length; a++){
+document.getElementById("p11").innerText=cars[1].name+ " " +cars[1].number+" "+cars[1].year;
+}
+// document.write(cars[a].name+"<br>");
 
 cars.forEach(function(value){
     let display=`
@@ -93,14 +106,40 @@ cars.forEach(function(value){
     <p>Number=${value.number}</p>
     <p>ownerName=${value.ownerName}</p>
     `;
-document.getElementById("p11").innerHTML+=display;
+document.getElementById("p12").innerHTML+=display;
 })
 
 const carName=[ "Volvo", "Toyota", "BMW", "MG" ]
-// let carlng=carName.length;
 // for(let a=0;a<4;a++){
-    document.getElementById("p12").innerHTML=carName+"<br>";
+document.getElementById("p13").innerHTML=carName;
 // }
+// let carlng=carName.length;
+
+const fruits=["banana", "kiwi", "orange", "Apple"]
+let fJoin=fruits.join("( )+  ");  
+document.getElementById("p14").innerHTML="<h4>Join[( )+] = </h4>" +fJoin;
+
+fruits.pop();
+document.getElementById("p15").innerHTML="<h4>Pop= </h4>"+fruits;
+
+fruits.push("MG");
+document.getElementById("p16").innerHTML="<h4>Push= </h4>"+fruits;
+
+fruits[fruits.length]="kiuytfrfcv";
+document.getElementById("p17").innerHTML="<h4>Adding= </h4>"+fruits;
+
+delete fruits[4];
+document.getElementById("p18").innerHTML="<h4>Deleting= </h4>"+fruits;
+
+const fruits2=["oiuytf", "uytrdc", "7rdjk", "o8765ed"]
+let ffconact=fruits.concat(fruits2);
+document.getElementById("p19").innerHTML="<h4>Connecting= </h4>"+ffconact;
+
+let fsplicing= fruits.splice(0,2,"jjj","mmm");
+document.getElementById("p20").innerHTML="<h4>Splicing= </h4>"+fruits+"<br>"+fsplicing;
+
+let fslicing= fruits2.slice(2);
+document.getElementById("p21").innerHTML="<h4>Slicing= </h4>"+fruits2+"<br>"+fslicing;
 
     </script>
 

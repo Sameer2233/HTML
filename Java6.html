@@ -35,6 +35,19 @@
 <p id="p19"></p>
 <p id="p20"></p>
 <p id="p21"></p>
+<hr>
+<p id="p22"></p>
+<p id="p23"></p>
+<p id="p24"></p>
+<p id="p25"></p>
+<p id="p26"></p>
+<p id="p27"></p>
+<p id="p28"> </p>
+<p id="p29"></p>
+<p  id="p30"></p>
+<p id="p31"></p>
+<p id="p32"></p>
+<p id="p33"></p>
     </div>
 
     <script>
@@ -135,11 +148,59 @@ const fruits2=["oiuytf", "uytrdc", "7rdjk", "o8765ed"]
 let ffconact=fruits.concat(fruits2);
 document.getElementById("p19").innerHTML="<h4>Connecting= </h4>"+ffconact;
 
-let fsplicing= fruits.splice(0,2,"jjj","mmm");
+let fsplicing= fruits.splice(3,0,"jjj","mmm");
 document.getElementById("p20").innerHTML="<h4>Splicing= </h4>"+fruits+"<br>"+fsplicing;
 
 let fslicing= fruits2.slice(2);
 document.getElementById("p21").innerHTML="<h4>Slicing= </h4>"+fruits2+"<br>"+fslicing;
+
+const fruit=["Banana", "Orange", "Apple", "Mango"]
+
+fruit.sort();
+document.getElementById("p22").innerHTML="<h4>Sorting= </h4>"+fruit;
+
+let freverse=fruit.reverse();
+document.getElementById("p23").innerHTML="<h4>Reversing= </h4>"+fruit;
+
+const table=[10,12,14,20,24];
+
+let fmap= table.map(function(value){
+    return value+2;
+})
+document.getElementById("p24").innerHTML="<h4>Maping= </h4>"+fmap;
+
+let ffilter=table.filter(function(va){
+    return va>=20;
+})
+document.getElementById("p25").innerHTML="<h4>Filtering= </h4>"+ffilter;
+
+let tfind=table.find(function(v){
+    return v>9;
+})
+document.getElementById("p26").innerHTML="<h4>Finding= </h4>"+tfind;
+
+let finclude=fruit.includes("Orange");
+document.getElementById("p27").innerHTML="<h4>Including= </h4>"+finclude;
+
+let fkey=fruit.keys();
+for(let a of fkey){
+    fkey += a+"<br>";
+    console.log(a)
+}
+document.getElementById("p28").innerHTML="<h4>Key Method= </h4>"+fkey;
+
+let tvalue=table.values();
+for(let x of tvalue){
+    tvalue+=x+"<br>";
+}
+document.getElementById("p29").innerHTML="<h4>Values of Table= </h4>"+tvalue;
+
+let fentries=fruit.entries();
+for(let i of fentries){
+    fentries+=i+"<br>";
+    console.log(i)
+}
+document.getElementById("p30").innerHTML="<h4>Entries= </h4>"+fentries;    
 
     </script>
 

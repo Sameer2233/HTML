@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java7 Work</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+
+        <p id="p1"></p>
+        <p id="p2" onclick="date()"></p>
+        <button id="p3" onclick="get()">Button for Date</button>
+        <br>
+        <br>
+        <input type="text" onchange="text()" id="p4" placeholder="Just Write any Text">
+        <p id="p5">Text Result</p>
+        <br>
+        <input type="text" placeholder="Just Write Anything"
+        onchange="text2()" id="data">
+        <p id="text"> Text</p>
+
+    </div>
+
+<script>
+
+const sameer={
+    fname: "Sameer",
+    age: 21,
+    nmber: 098765432
+}
+
+const sameer1={
+    fname: "Sameer1",
+    age: 22,
+    nmber: 98765432
+}
+
+const sameer2={
+    fname: "Sameer2",
+    age: 23,
+    nmber: 3456784567
+}
+
+const sameer3={
+    fname: "Sameer3",
+    age: 24,
+    nmber: 938468934
+}
+
+const data=[ 
+    sameer, sameer1, sameer2, sameer3
+]
+
+data.forEach(function(value) {
+    // document.getElementById("p1").innerHTML=value.age+"<br>";
+    document.write(
+    value.fname+" "
+    +value.age+" "
+    +value.nmber+"<br>"
+    );
+});
+
+document.getElementById("p2").innerHTML=Date();
+
+
+function get(){
+document.getElementById("p3").innerHTML=Date();
+}
+
+function text(){
+//     document.getElementById("p5").innerHTML=
+//     document.getElementById("p4").value;
+
+let tex=document.getElementById("p4").value;
+document.getElementById("p5").innerText=tex;
+}
+
+function text2(){
+    let tex2=document.getElementById("data").value;
+    document.getElementById("text").innerText=tex2;
+}
+
+</script>
+
+</body>
+</html>

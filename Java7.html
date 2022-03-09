@@ -21,6 +21,24 @@
         <input type="text" placeholder="Just Write Anything"
         onchange="text2()" id="data">
         <p id="text"> Text</p>
+        <button id="p6" onmouseenter="key()" >Mouse Enter</button>
+        <br><br>
+        <button id="p7" onmousedown="key2()" >Mouse Down</button>
+        <br>
+        <br>
+        <button id="p8" onmouseup="key3()" >Mouse Up</button>
+        <br>
+        <br>
+        <button id="p9" onmouseout="key4()" >Mouse Out</button>
+        <br>
+        <br>
+        <button id="p10" onmouseleave="key5()" > Mouse Leave</button>
+        <br>
+        <br>
+        <button id="p11" keypress="key6()" >Key Press</button>
+
+
+
 
     </div>
 
@@ -82,6 +100,31 @@ function text2(){
     let tex2=document.getElementById("data").value;
     document.getElementById("text").innerText=tex2;
 }
+
+function key(){
+    document.getElementById("p6").innerHTML=Date();
+}
+
+function key2(){
+    document.getElementById("p7").innerHTML=Date();
+}
+
+function key3(){
+    document.getElementById("p8").innerHTML=Date();
+}
+
+function key4(){
+    document.getElementById("p9").innerHTML=Date();
+}
+
+function key5(){
+    document.getElementById("p10").innerHTML=Date();
+}
+
+function key6(){
+    document.getElementById("p11").innerHTML=Date();
+}
+
 
 </script>
 

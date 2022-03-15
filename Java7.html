@@ -62,6 +62,15 @@
         </div>
         <p>Scrolled=<span id="p12">0</span> times</p>
         <hr>
+        <p id="p13"></p>
+        <p id="p14"></p>
+        <p id="p15"></p>
+        <p id="p16"></p>
+        <hr>
+        <p id="p17"></p>
+        <hr>
+        <p id="p18"></p>
+        <hr>
         
 
     </div>
@@ -160,6 +169,50 @@ function key7(){
 let x=0;
 function key8(){
       document.getElementById("p12").innerHTML= x += 1;
+}
+
+const key9=new Date(2000,11,10);
+document.getElementById("p13").innerText=key9.toDateString();
+
+const key10=new Date("2000-11-11")
+document.getElementById("p14").innerHTML=key10;
+
+const key11= new Date();
+// document.getElementById("p15").innerHTML=key11.getFullYear();
+// document.getElementById("p15").innerHTML=key11.getMonth();
+// document.getElementById("p15").innerHTML=key11.getDate();
+// document.getElementById("p15").innerHTML=key11.getDay();
+// document.getElementById("p15").innerHTML=key11.getHours();
+// document.getElementById("p15").innerHTML=key11.getSeconds();
+// document.getElementById("p15").innerHTML=key11.getMilliseconds();
+document.getElementById("p15").innerHTML=key11.getMinutes();
+
+const key12=new Date();
+key12.setFullYear(2000);
+key12.setHours(11);
+key12.setMonth(10);
+key12.setDate(10);
+key12.setMinutes(49);
+key12.setSeconds(22);
+key12.setMilliseconds(49);
+document.getElementById("p16").innerHTML=key12;
+
+let age1=20;
+let age2=17;
+
+if((age1>age2)&&(age1===age2)){
+    document.getElementById("p17").innerHTML="Enough age to buy beer ";
+}else{
+    document.getElementById("p17").innerHTML="Not Enough age to buy beer"
+}
+
+let ag1=20;
+let ag2=17;
+
+if((ag1>ag2)||(ag1===ag2)){
+    document.getElementById("p18").innerHTML="Enough age to buy beer ";
+}else{
+    document.getElementById("p18").innerHTML="Not Enough age to buy beer";
 }
 
 </script>

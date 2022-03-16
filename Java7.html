@@ -71,7 +71,12 @@
         <hr>
         <p id="p18"></p>
         <hr>
-        
+        <p id="p19"></p>
+        <p id="p20"></p>
+        <p id="p21"></p>
+        <p id="p22"></p>
+        <p id="p23"></p>
+        <p id="p24"></p>
 
     </div>
 
@@ -214,6 +219,91 @@ if((ag1>ag2)||(ag1===ag2)){
 }else{
     document.getElementById("p18").innerHTML="Not Enough age to buy beer";
 }
+
+let hor= new Date().getHours();
+if(hor===19){
+    document.getElementById("p19").innerHTML="Good Day";
+}else if(hor<21){
+    document.getElementById("p19").innerHTML="Good Evening";
+}
+
+let da=new Date().getDay();
+if(da==0){
+    d="Sunday"
+}else if(da==1){
+    d="Monday"
+}else if(da==2){
+    d="Tuesday"
+}else if(da==3){
+    d="Wed"
+}else if(da==4){
+    d="Thurs"
+}else if(da==5){
+    d="Fri"
+}else if(da==6){
+    d="Satur"
+}
+document.getElementById("p20").innerHTML=d;
+
+switch(new Date().getDay()){
+    case 0:
+        d="Sun";
+        break;
+        case 1:
+            d="MON";
+            break;
+            case 2:
+                d="TUE";
+                break;
+                case 3:
+                    d="WED";
+                    break;
+                    case 4:
+                        d="Thu";
+                        break;
+                        case 5:
+                            d="Fri";
+                            break;
+                            case 6:
+                                d="Sat";
+                                break;
+                                default:
+                                d="Invalid";
+}
+document.getElementById("p21").innerHTML=d;
+
+switch(new Date().getDay()){
+    case 6:
+        case 0:
+            d="It's Weekend"
+            break;
+            case 1:
+                case 2:
+                    d="Looking towards Weekend";
+                    break;
+                    case 4:
+                        case 5:
+                            d="Weekend will soon";
+                            break;
+                            default:
+                                d="Nothing";
+}
+document.getElementById("p22").innerHTML=d;
+
+let ay=["sun", "mon", 'tue','wed','thu','fri','sat'];
+document.getElementById("p23").innerHTML=ay[new Date().getDay()].toUpperCase();
+
+let f=new Date().getDay();
+if(f==6 || f==0){
+    dm="Weekend";
+}else if(f==1 || f==2){
+    dm="Week Days";
+}else if(f==4 || f==5){
+    dm="Weekend soon";
+}else{
+    dm="Nothing"
+}
+document.getElementById("p24").innerHTML=dm;
 
 </script>
 

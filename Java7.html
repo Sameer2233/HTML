@@ -77,6 +77,15 @@
         <p id="p22"></p>
         <p id="p23"></p>
         <p id="p24"></p>
+        <hr>
+        <ul id="p25"></ul>
+        <p id="p26"></p>
+        <p id="p27"></p>
+        <p id="p28"></p>
+        <p id="p29"></p>
+        <p id="p30"></p>
+        <p id="p31"></p>
+        <p id="p32"></p>
 
     </div>
 
@@ -304,6 +313,55 @@ if(f==6 || f==0){
     dm="Nothing"
 }
 document.getElementById("p24").innerHTML=dm;
+
+const key13=["BMW","TATOTA","HONDA","CIVIC","CITY"]
+for(let i=0;i<key13.length;i++){
+    document.getElementById("p25").innerHTML+=`<li>${key13[i]}</li>`
+}
+// key13.forEach(function(value){
+//     document.getElementById("p25").innerHTML=key13;
+// })
+
+for(let i=0;i<11;i++){
+    document.getElementById("p26").innerHTML+="This Number is"+" " +i+"."+"<br>";
+}
+
+const key14=["BMW","TATOTA","HONDA","CIVIC","CITY"]
+for(let i=3;i<key14.length;i++){
+    document.getElementById("p27").innerHTML+=`<li>${key14[i]}</li>`
+}
+
+const key15=["Dave","Dcae","Dacky","Donkey"];
+for(x in key15){
+    document.getElementById("p28").innerHTML+=`<li>${key15[x]}</li>`;
+}
+
+const key16= ["BMW", "Volvo", "Mini"];
+for(m of key16){
+    document.getElementById("p29").innerHTML+=`<h3>${m}</h3>`+"<br>";
+}
+
+for(i=0;i<11;i++){
+    if(i===5){break;}
+    document.getElementById("p30").innerHTML+="Number ="+i+"<br>";
+}
+
+for(i=0;i<11;i++){
+    if(i===5){continue;}
+    if(i===9){continue;}
+    document.getElementById("p31").innerHTML+="Number ="+i+"<br>";
+}
+
+let key17 = [
+            {name: 'John', age: 20},
+            {name: 'Jane', age: 17},
+            {name: 'Mary', age: 22},
+            {name: 'Peter', age: 17},
+        ]
+              for(let v of key17){
+            if(v.age < 18){continue;}
+            document.getElementById("p32").innerHTML += `<li>${v.name}+${v.age}</li>`;
+        }
 
 </script>
 

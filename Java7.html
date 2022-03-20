@@ -86,6 +86,11 @@
         <p id="p30"></p>
         <p id="p31"></p>
         <p id="p32"></p>
+        <p id="p33"></p>
+        <p id="p34"></p>
+        <p id="p35"></p>
+        <p id="p36"></p>
+        <p id="p37"></p>
 
     </div>
 
@@ -362,6 +367,25 @@ let key17 = [
             if(v.age < 18){continue;}
             document.getElementById("p32").innerHTML += `<li>${v.name}+${v.age}</li>`;
         }
+let key18 = new Map([
+            ['John', 20],
+            ['Jane', 17],
+            ['Mary', 22],
+            ['Peter', 17],
+        ]);
+        for(m of key18){
+            document.getElementById("p33").innerHTML+=m+"<br>";
+        }
+
+let key19=new Set(["Jane",'Jake','Woist','fcvbnnk']);
+for(m of key19){
+    document.getElementById("p34").innerHTML+=m+'<br>';
+}
+
+let key20="jhf,kwudefy,niueyf";
+for(x of key20){
+document.getElementById("p35").innerHTML+=key20.split();
+};
 
 </script>
 

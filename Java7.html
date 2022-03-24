@@ -89,8 +89,17 @@
         <p id="p33"></p>
         <p id="p34"></p>
         <p id="p35"></p>
-        <p id="p36"></p>
+        <hr>
+        <button onclick="fg()">Try it</button>
+        <p id="p36">Sameer Ahmad</p>
         <p id="p37"></p>
+        <hr><hr>
+        <input id="p317">
+        <button onclick="click()">Click</button>
+        <p id="p38"></p>
+        <hr><hr>
+        <p id="p39"></p>
+        <p id="p40"></p>
 
     </div>
 
@@ -383,9 +392,36 @@ for(m of key19){
 }
 
 let key20="jhf,kwudefy,niueyf";
-for(x of key20){
-document.getElementById("p35").innerHTML+=key20.split();
-};
+document.getElementById("p35").innerHTML=key20.split();
+
+function fg(){
+    let key21=document.getElementById("p36").innerHTML;
+document.getElementById("p36").innerHTML=key21.replace("Ahmad","21 Years old");
+}
+
+let key22="Sameer Ahmad";
+document.getElementById("p37").innerHTML=key22.search('Ahmad');
+
+try{
+    aleert("Welcome")
+}
+catch(w){
+document.getElementById("p39").innerHTML=w;
+}
+
+function click(){
+    try{
+    let key23=document.getElementById("p317").value;
+        if(key23.length == 0){throw "Put Something";}
+        else if(key23.length > 10){throw "Put less than 10";}
+        document.getElementById("p38").innerHTML=key23;
+        console.log(key23.length)
+    }
+    catch(e){
+        document.getElementById("p38").innerHTML=e;
+        console.log(e)
+    }    
+}
 
 </script>
 

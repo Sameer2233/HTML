@@ -95,11 +95,17 @@
         <p id="p37"></p>
         <hr><hr>
         <input id="p317">
-        <button onclick="click()">Click</button>
+        <button onclick="cl()">Click</button>
         <p id="p38"></p>
         <hr><hr>
         <p id="p39"></p>
         <p id="p40"></p>
+        <p id="p41"></p>
+        <p id="p42"></p>
+        <p id="p43"></p>
+        <p id="p44"></p>
+        <p id="p45"></p>
+        <p id="p46"></p>
 
     </div>
 
@@ -409,17 +415,15 @@ catch(w){
 document.getElementById("p39").innerHTML=w;
 }
 
-function click(){
-    try{
+function cl(){
     let key23=document.getElementById("p317").value;
-        if(key23.length == 0){throw "Put Something";}
-        else if(key23.length > 10){throw "Put less than 10";}
+    try{
+        if(key23.length < 5) throw "Put Something";
+        if(key23.length > 10) throw "Put less than 10";
         document.getElementById("p38").innerHTML=key23;
-        console.log(key23.length)
     }
     catch(e){
         document.getElementById("p38").innerHTML=e;
-        console.log(e)
     }    
 }
 

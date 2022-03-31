@@ -33,10 +33,17 @@
         <p id="p22"></p>
         <p id="p23"></p>
         <p id="p24"></p>
+        <p id="p25"></p>
+        <p id="p26"></p>
+        <p id="p27"></p>
+        <p id="p28"></p>
+        <p id="p29"></p>
+        <p id="p30"></p>
     </div>
 
     <script>
-
+        // import person from "./module.js"
+        
 // "use strict";
 let x=2;
 let X=6;
@@ -159,6 +166,46 @@ document.getElementById("p20").innerHTML=key13.Sa();
 document.getElementById("p21").innerHTML=key13.Ag();
 document.getElementById("p22").innerHTML=key13.Number();
 document.getElementById("p23").innerHTML=key13.House();
+
+class calcu {
+    constructor(a,b){
+        this.a=a;
+        this.b=b;
+    }
+    add(){
+        return this.a+this.b;
+    }
+    sub(){
+        return this.a-this.b;
+    }
+    mul(){
+        return this.a*this.b;
+    }
+    div(){
+        return this.a/this.b;
+    }
+}
+const key14=new calcu(10,25);
+document.getElementById("p24").innerHTML="ADD="+key14.add()+"<br>"+"SUB="+key14.sub()+"<br>"+"MUL="+key14.mul()+"<br>"+"DIV="+key14.div().toFixed(2)+"<br>";
+
+class cal {
+    add(c,d){
+        this.a=c;
+        this.b=d;
+        return this.a+this.b;
+    }
+    sub(){
+        return this.a-this.b;
+    }
+    mul(){
+        return this.a*this.b;
+    }
+    div(){
+        return this.a/this.b;
+    }
+}
+const key15=new cal();
+document.getElementById("p25").innerHTML="ADD="+key15.add(18,10)+"<br>"+"SUB="+key15.sub()+"<br>"+"MUL="+key15.mul()+"<br>"+"DIV="+key15.div().toFixed(2)+"<br>";
 
 </script>
     

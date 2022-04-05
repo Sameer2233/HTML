@@ -207,6 +207,15 @@ class cal {
 const key15=new cal();
 document.getElementById("p25").innerHTML="ADD="+key15.add(18,10)+"<br>"+"SUB="+key15.sub()+"<br>"+"MUL="+key15.mul()+"<br>"+"DIV="+key15.div().toFixed(2)+"<br>";
 
+const key16= {
+"employees":[
+  {"firstName":"John", "lastName":"Doe"},
+  {"firstName":"Anna", "lastName":"Smith"},
+  {"firstName":"Peter", "lastName":"Jones"}
+]
+}
+document.getElementById("p26").innerHTML=key16.employees[1].firstName;
+
 </script>
     
 </body>

@@ -39,6 +39,12 @@
         <p id="p28"></p>
         <p id="p29"></p>
         <p id="p30"></p>
+        <p id="p31"></p>
+        <p id="p32"></p>
+        <p id="p33"></p>
+        <p id="p34"></p>
+        <p id="p35"></p>
+        <p id="p36"></p>
     </div>
 
     <script>
@@ -215,6 +221,93 @@ const key16= {
 ]
 }
 document.getElementById("p26").innerHTML=key16.employees[1].firstName;
+
+const display=(info)=>{
+  document.getElementById("p27").innerHTML=info; 
+}
+
+function first(){
+    display("Hello");
+}
+
+function second(){
+    display("Goodbye");
+}
+
+first();
+second();
+
+const display1=(info)=>{
+  document.getElementById("p28").innerHTML=info; 
+}
+
+function mycal(n1, n2){
+    let sum=n1 * n2;
+    display(sum);
+}
+
+mycal(3,5);
+
+setTimeout(function(){
+ document.getElementById("p29").innerHTML="I love";   
+}, 3000);
+
+setTimeout(function(){
+    let d=new Date();
+    document.getElementById("p30").innerHTML=d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+}, 2000);
+
+const promise=new Promise(function(){
+let num=20;
+if(num==10){
+    document.getElementById("p31").innerHTML="Working";
+}else{
+    document.getElementById("p31").innerHTML="not Working";
+}
+});
+
+const display2=function(so){
+    document.getElementById("p32").innerHTML=so;
+}
+
+const mpro= new Promise(function(resol, reject){
+    let n2=0;
+    if(n2==0){
+        resol("ok");
+    }else{
+        reject("not work")
+    }
+})
+mpro.then(
+    function(v){display2(v);},
+    function(err){display2(err);}
+);
+
+const mypro= new Promise(function(resl){
+    setTimeout(function(){resl("i loive")},3000)
+})
+mypro.then(function(v){
+    document.getElementById("p33").innerHTML=v
+})
+
+const display3=function(som){
+    document.getElementById("p34").innerHTML=som;
+}
+async function myfunc(){
+    return "maaahh";
+}
+myfunc().then(
+    function(v){display3(v);},
+    function(rr){display3(rr);}
+);
+
+async function myf(){
+    const pro= new Promise(function(retur){
+        retur("i o");
+    });
+    document.getElementById("p35").innerHTML=await pro;
+}
+myf();
 
 </script>
     

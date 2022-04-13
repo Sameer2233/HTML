@@ -49,6 +49,9 @@
         <p id="p38"></p>
         <p id="p39"></p>
         <p id="p40"></p>
+        <p id="p41"></p>
+        <p id="p42"></p>
+        <p id="p43"></p>
 
     </div>
 
@@ -323,6 +326,63 @@ m("uiytredfgh")
 document.getElementById("p36").innerHTML= await promise5;
 }
 mf();
+
+const key17=function(a,b){
+    return a*b
+}
+document.getElementById("p37").innerHTML=key17(3,5);
+document.getElementById("p38").innerHTML=key17.length;
+
+
+// (function(){
+//     document.getElementById("p38").innerHTML='Hello i am self start';
+// }) ();
+
+const key18=(x,y)=>(x*y);
+document.getElementById("p39").innerHTML=key18(5,5);
+
+document.getElementById("p40").innerHTML= sumAll(1, 123, 500, 115, 44, 88);
+function sumAll(){
+    let i=0;
+    for(let a=0; a<arguments.length;a++){
+        i+=arguments[a];
+    }
+    return i;
+}
+
+const key19={
+    firstName:"shawas",
+    lastName:"Nawxc",
+    fullName: function(){
+       return this.firstName+" "+this.lastName;
+    }
+}
+document.getElementById("p41").innerHTML= key19.fullName();
+
+const key20={ 
+    fullName: function(){
+        return this.firstName+" "+this.lastName;
+    }
+}
+const key21={
+    firstName:"shmas",
+    lastName:"don"
+}
+document.getElementById("p42").innerHTML=key20.fullName.call(key21);
+
+const key23={
+    firstName:"shawas",
+    lastName:"Nawxc", 
+    fullName: function(){
+        return this.firstName+" "+this.lastName;
+    }
+}
+const key22={
+    firstName:"John",
+    lastName:"dave",
+}
+document.getElementById("p43").innerHTML=key23.fullName.call(key22);
+
 
 </script>
     

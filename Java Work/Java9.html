@@ -11,10 +11,103 @@
     
     <div class="container">
 
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <p id="p4"></p>
+        <p id="p5"></p>
+        <p id="p6"></p>
+        <p id="p7"></p>
+        <p id="p8"></p>
+        <p id="p9"></p>
+        <p id="p10"></p>
+        <p id="p11"></p>
+        <p id="p12"></p>
+        <p id="p13"></p>
+        <p id="p14"></p>
+        <p id="p15"></p>
+        <p id="p16"></p>
+        <p id="p17"></p>
+        <p id="p18"></p>
+        <p id="p19"></p>
+        <p id="p20"></p>
+        <p id="p21"></p> 
+        <p id="p22"></p>
+        <p id="p23"></p>
+        <p id="p24"></p>
+        <p id="p25"></p>
+        <p id="p26"></p>
+        <p id="p27"></p>
+        <p id="p28"></p>
+        <p id="p29"></p>
+        <p id="p30"></p>
+
     </div>
 
     <script>
         
+        class car{
+    constructor(name, year,n,b,c,d){
+        this.name=name;
+        this.year=year;
+        this.n=n;
+        this.b=b;
+        this.c=c;
+        this.d=d;
+    }
+}
+const key=new car('Ford', 2000,"LED",1234,"8cc",098764);
+document.getElementById('p1').innerHTML="<h5>Classes</h5>"+key.name+" "+key.year+' '+key.n+" "+key.b+" "+key.c+" "+key.d;
+
+const key1=new car('Lxius', 2020,"LMD",1984,"10cc",02345164);
+document.getElementById('p2').innerHTML=key1.name+" "+key1.year+' '+key1.n+" "+key1.b+" "+key1.c+" "+key1.d;
+
+class student{
+    constructor(age){
+        this.age=age;
+    }
+    a(){
+        let key3=new Date();
+        return key3.getFullYear() - this.age;
+    }
+}
+const key4=new student( 2000);
+document.getElementById("p3").innerHTML="I am "+key4.a()+" Years Old";
+
+const key5=new student(1998);
+document.getElementById("p4").innerHTML="I am "+key5.a()+" Years Old";
+
+class car2{
+    constructor(name){
+        this.carname=name;
+    }
+    mycar(){
+        return " I have a " + this.carname + " car";
+    }
+}
+class model extends car2{
+    constructor(name,mode){
+        super(name);
+        this.model=mode;
+    }
+    mymode(){
+        return this.mycar()+', it is '+this.model;
+    }
+}
+let cr= new model('Tayota','Carolla');
+document.getElementById("p5").innerHTML=cr.mymode();
+
+class car3{
+    constructor(na){
+        this.name2=na;
+    }
+    static hi(x){
+        return "Hii "+x.name2;
+    }
+}
+let cr2=new car3("Tayota");
+document.getElementById("p6").innerHTML=car3.hi(cr2);
+
     </script>
 
 </body>

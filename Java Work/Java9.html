@@ -41,6 +41,7 @@
         <p id="p28"></p>
         <p id="p29"></p>
         <p id="p30"></p>
+        
 
     </div>
 
@@ -107,6 +108,70 @@ class car3{
 }
 let cr2=new car3("Tayota");
 document.getElementById("p6").innerHTML=car3.hi(cr2);
+
+function key6(first,last,age,eye){
+    this.firstName=first;
+    this.lastName=last;
+    this.age=age;
+    this.eyeColor=eye;
+}
+
+const key7= new key6("Sally","Rock",34,"Brown")
+document.getElementById("p7").innerHTML=
+"My name is " + key7.firstName+" "+key7.lastName+". "
++"My age is "+key7.age+". "
++"My eye color is "+key7.eyeColor;
+
+key7.nat="Eng";
+document.getElementById("p8").innerHTML="My lang is "+key7.nat;
+
+function key9(first,last,age,eye){
+    this.firstName=first;
+    this.lastName=last;
+    this.age=age;
+    this.eyeColor=eye;
+    this.all = function(){
+         return "My name is " + this.firstName+" "+this.lastName+". "
+         +"My age is "+this.age+". "
+         +"My eye color is "+this.eyeColor;
+    };
+}
+
+key9.prototype.nat="ARAB"
+const key8= new key9("Saly","Dove",54,"Black")
+document.getElementById("p9").innerHTML= key8.all()+". "+"My lang is "+key8.nat;
+
+function key11(first,last,age,eye){
+    this.firstName=first;
+    this.lastName=last;
+    this.age=age;
+    this.eyeColor=eye;
+}
+    key11.prototype.all = function(){
+         return "My name is " + this.firstName+" "+this.lastName+". "
+         +"My age is "+this.age+". "
+         +"My eye color is "+this.eyeColor;
+    };
+
+key11.prototype.nat="URDU";
+const key12= new key11("Say","Dom",44,"Blue")
+document.getElementById("p10").innerHTML= key12.all()+". "+"My lang is "+key12.nat;
+
+function key90(first,last,age,eye){
+    this.firstName=first;
+    this.lastName=last;
+    this.age=age;
+    this.eyeColor=eye;
+    this.all = function(){
+         return "My name is " + this.firstName+" "+this.lastName+". "
+         +"My age is "+this.age+". "
+         +"My eye color is "+this.eyeColor;
+    };
+}
+
+key90.prototype.nat = "ARA";
+const key13= new key90("Sal","Do",64,"Blish")
+document.getElementById("p11").innerHTML= key13.all()+" My lang is "+key13.nat;
 
     </script>
 

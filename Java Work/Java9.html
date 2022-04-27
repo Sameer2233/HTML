@@ -73,7 +73,12 @@
         <p id="p26"></p>
         <button id="p25" onclick="clearInterval(myVar)">Stop time</button>
         <hr>
+        <form name="form" action="">
+            Enter Name: <input type="text" name="cust"/>
+            <input type="button" value="Set Cookie" onclick="WriteCookie()"/>
+        </form>
         <p id="p27"></p>
+        <hr>
         <p id="p28"></p>
         <p id="p29"></p>
         <p id="p30"></p>
@@ -294,6 +299,26 @@ let myVar=setInterval(mytime,1000);
 function mytime(){
     document.getElementById("p26").innerHTML=new Date().toLocaleTimeString();
 }
+
+function WriteCookie() {
+    var n = new Date();
+    n.setMonth( n.getMonth() - 1 );
+    cookievalue = escape(document.form.cust.value) + ";"
+              
+    document.cookie = "name=" + cookievalue;
+    document.cookie = "expires=" + n.toUTCString() + ";"
+    document.getElementById("p27").innerHTML="Setting Cookies : " + "name=" + cookievalues;
+}
+
+// function WriteCookie() {
+//                if( document.form.cust.value == "" ) {
+//                   alert("Enter some value!");
+//                   return;
+//                }
+//                cookievalue = escape(document.form.cust.value) + ";";
+//                document.cookie = "name=" + cookievalue;
+//                document.getElementById("p28").innerHTML="Setting Cookies : " + "name=" + cookievalue;
+//             }
 
 </script>
 

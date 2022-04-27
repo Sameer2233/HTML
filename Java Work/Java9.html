@@ -66,14 +66,30 @@
         <p id="p20"></p>
         <p id="p21"></p> 
         <p id="p22"></p>
-        <p id="p23"></p>
+        <input type="button" id="p23" onclick="newdoc()" value="LOAD">
+        <hr>
         <p id="p24"></p>
-        <p id="p25"></p>
+        <hr>
         <p id="p26"></p>
+        <button id="p25" onclick="clearInterval(myVar)">Stop time</button>
+        <hr>
         <p id="p27"></p>
         <p id="p28"></p>
         <p id="p29"></p>
         <p id="p30"></p>
+        <p id="p31"></p>
+        <p id="p32"></p>
+        <p id="p33"></p>
+        <p id="p34"></p>
+        <p id="p35"></p>
+        <p id="p36"></p>
+        <p id="p37"></p>
+        <p id="p38"></p>
+        <p id="p39"></p>
+        <p id="p40"></p>
+        <p id="p41"></p>
+        <p id="p42"></p>
+        <p id="p43"></p>
         
     </div>
 
@@ -245,6 +261,38 @@ function mov(){
 
 function dat(){
     document.getElementById("p19").innerHTML=Date();
+}
+
+document.getElementById("p20").innerHTML=
+"Width="+window.innerWidth+"px <br>"+
+"Heigth="+window.innerHeight+"px";
+
+document.getElementById("p21").innerHTML=
+"Screen availheight="+screen.availHeight+"px <br>"+
+"color="+screen.colorDepth+"px <br>"+
+"PX depth="+screen.pixelDepth+"px";
+
+document.getElementById("p22").innerHTML=
+"HostName="+window.location.hostname+"<br>"+
+"PathName="+window.location.pathname+"<br>"+
+"Protocol="+window.location.protocol+"<br>";
+
+function newdoc(){
+document.getElementById("p23").innerHTML=
+window.location.assign("https://www.w3schools.com");
+}
+
+document.getElementById("p24").innerHTML=
+"AppName="+navigator.appName+"<br>"+
+"CodeName="+navigator.appCodeName+"<br>"+
+"Cookie="+navigator.cookieEnabled+"<br>"+
+"AppVersion="+navigator.appVersion+"<br>"+
+"Product="+navigator.product+"<br>"+
+"Agent="+navigator.userAgent;
+
+let myVar=setInterval(mytime,1000);
+function mytime(){
+    document.getElementById("p26").innerHTML=new Date().toLocaleTimeString();
 }
 
 </script>

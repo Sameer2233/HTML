@@ -79,8 +79,13 @@
         </form>
         <p id="p27"></p>
         <hr>
-        <p id="p28"></p>
+        <input id="num" type="number" min="100" max="300" required>
+        <button onclick="fun()" >OK</button>
         <p id="p29"></p>
+        <hr>
+        <button onclick="getLocation()">Try it for location</button>
+        <p id="p28"></p>
+        <hr>
         <p id="p30"></p>
         <p id="p31"></p>
         <p id="p32"></p>
@@ -319,6 +324,29 @@ function WriteCookie() {
 //                document.cookie = "name=" + cookievalue;
 //                document.getElementById("p28").innerHTML="Setting Cookies : " + "name=" + cookievalue;
 //             }
+
+function fun(){
+    const m=document.getElementById("num");
+    if(!m.checkValidity()){
+        document.getElementById("p29").innerHTML=m.validationMessage;
+    }else{
+        document.getElementById("p29").innerHTML="Input OK"
+    }
+}
+
+const mo=document.getElementById("p28");
+function getLocation(){
+    try{
+        navigator.geolocation.getCurrentPosition(showPosition);
+    }catch{
+        mo.innerHTML=err;
+    }
+}
+
+function showPosition(position){
+    mo.innerHTML=position.coords.latitude+"<br>"+position.coords.longitude;
+    console.log(mo);
+}
 
 </script>
 

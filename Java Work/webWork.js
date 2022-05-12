@@ -20,41 +20,81 @@ async function get(file) {
   document.getElementById("p1").innerHTML = b;
 }
 
-let myBtn =document.getElementById("myBtn");
-let content =document.getElementById("content");
+function get1(){
+  fetch('https://jsonplaceholder.typicode.com/todos')
+      .then(response => response.json())
+      .then(data => {
+          console.log(data)
+          let b = ""
+          const url = document.getElementById('cont1')
+          data.forEach(elmnt => {
+              b += "userId: " + elmnt.userId + " and Title: " + elmnt.completed+"<br>";
+          });
+          url.innerHTML = b;
+      })}
 
-function getData(){
-    url="Sameer.text"
-    fetch(url).then((response)=>{
-        return response.text()
-    }).then((data)=>{
-        console.log(data)
-    })
+// function get2(){
+
+// let d2={
+//   "Id": 12345,
+//   "Customer": "John Smith",
+//   "Quantity": 1,
+//   "Price": 10.00
+// }
+//  fetch("https://reqbin.com/echo/post/json", {
+//                 method: "post",
+//                 headers: {
+//                     'Content-Type': 'application/json',
+//                 },
+//                 body: JSON.stringify(d2)
+//             })
+//             .then(response => response.json())
+//             .then(d2 => {
+//                 console.log(d2)
+//                 let url2=""
+//                 const b2=document.getElementById("cont2");
+//             })
+//             url2.innerHTML=b2;
+// }
+
+function get2(){
+  file="Sameer.text"
+  fetch(file).then((response)=>{
+    return response.text();
+  }).then((data)=>{
+    document.getElementById("cont2").innerHTML=data;
+  })
 }
-getData();
 
-// function get(){
-//     ur="https://api.github.com/users"
-//     fetch(ur).then((response)=>{
-//         return response.json()
-//     }).then((data1)=>{
-//         // document.getElementById("p1").innerHTML=data;
-//         console.log(data1)
-//     })
-// }
-// get();
+function get3(){
+  file="https://api.github.com/users"
+  fetch(file).then((response)=>{
+    return response.json();
+  }).then((data)=>{
+    document.getElementById("cont3").innerHTML=JSON.stringify(data);
+    console.log(data)
+  })
+}
 
-// function get1(){
-//     ur1="https://dummy.restapiexample.com/api/v1/create"
-//     data='{"name":"sahmmeer9876543","salary":"123","age":"23"}'
-//     params={
-//         method: "post",
-//         headers:{
-//             "content-type":"application-JSON"
-//         },
-//         body: data
-//     }
-//     fetch(ur1,params).then(response=> response.json())
-//     .then(data=>console.log(data))
-// }
-// get1();
+function get4(){
+  file="https://dummy.restapiexample.com/api/v1/create"
+  data={
+    "name": "tejhgst",
+    "salary": "123",
+    "age": "23",
+    "id": 25
+}
+  params={
+    method:"post",
+    headers:{
+      "Content-type":"application/json"
+    },
+    body:data
+  }
+  fetch(file,params).then((response)=>{
+    return response.json();
+  }).then((data)=>{
+    document.getElementById("cont4").innerHTML=data;
+    console.log(data)
+  })
+}

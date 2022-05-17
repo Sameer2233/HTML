@@ -98,3 +98,9 @@ function get4(){
     console.log(data)
   })
 }
+
+function Hello() {
+  return <h1>Hello World!</h1>;
+}
+
+ReactDOM.render(<Hello />, document.getElementById('mydiv'))

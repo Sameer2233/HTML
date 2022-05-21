@@ -6,14 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java Assignment</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        h3{
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     
     <div class="container">
 
+        <h3>Styling with JS</h3>
         <p id="para1">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et numquam explicabo laudantium delectus distinctio illo fugit maiores odio provident, dolor quisquam adipisci veniam dignissimos ea ipsam. Quos voluptatem dolore velit.
         </p>
+
+        <hr>
+
+        <h3>Added Paragraph Using JS</h3>
+        <p id="firstPara"></p>
+
+        <hr>
+
+        <h3>Added DIV Using JS</h3>
+        <div id="firstDiv"></div>
+
+        <hr>
+
+        <h3>Added Image Using JS</h3>
+        <p id="img"></p>
+
+        <hr>
 
     </div>
 
@@ -26,6 +49,35 @@
         document.getElementById("para1").style.margin="20px 20px"
         document.getElementById("para1").style.padding="20px 20px";
 
+    
+        const newPara = document.createElement("p"); 
+	    const text = document.createTextNode("The Internet of Things (IoT) refers to a vast number of “things” that are connected to the internet so they can share data with other things IoT applications, connected devices, industrial machines and more. Internet-connected devices use built-in sensors to collect data and, in some cases, act on it."); 
+	    newPara.appendChild(text);
+        document.getElementById("firstPara").appendChild(newPara);
+
+        document.getElementById("firstPara").style.color="red";
+        document.getElementById("firstPara").style.background="blue";document.getElementById("firstPara").style.fontSize="20px";
+        document.getElementById("firstPara").style.border="20px dotted gray";
+        document.getElementById("firstPara").style.margin="10px 10px"
+        document.getElementById("firstPara").style.padding="10px 10px";
+
+        const newDiv = document.createElement("div"); 
+	    const textDiv = document.createTextNode("The Internet of Things (IoT) describes the network of physical objects—“things”—that are embedded with sensors, software, and other technologies for the purpose of connecting and exchanging data with other devices and systems over the internet."); 
+	    newDiv.appendChild(textDiv);
+        document.getElementById("firstDiv").appendChild(newDiv);
+
+        document.getElementById("firstDiv").style.color="Crimson";
+        document.getElementById("firstDiv").style.background="Yellow";
+        document.getElementById("firstDiv").style.fontSize="20px";
+        document.getElementById("firstDiv").style.border="20px double #00FFFF";
+        document.getElementById("firstDiv").style.margin="10px 10px"
+        document.getElementById("firstDiv").style.padding="10px 10px";
+
+        const img = document.createElement("IMG");
+        img.setAttribute("src", "/Assignment-1/img/Space1.jpg");
+        img.setAttribute("width", "304");
+        img.setAttribute("height", "228");
+        document.getElementById("img").appendChild(img);
 
     </script>
 

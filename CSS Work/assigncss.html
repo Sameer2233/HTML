@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Work</title>
+    <style>
+        div{
+            background-color: red;
+            border: 5px solid gold;
+            padding: 10px 10px;
+            margin: 10px 10px;
+            margin-left: 100px;
+            width: 62px;
+        }
+        .one:hover{
+            transform: rotateX(150deg);
+            transform: rotateY(150deg);
+            transform: rotateZ(90deg);
+        }
+        .two{
+             width: 100px;
+             height: 80px;
+             background-color: rgb(126, 223, 139);
+             color: red;
+             padding: 10px 10px;
+             margin: 50px 50px;
+             transform: rotate(50deg);
+             transition:  width 2s, height 2s, transform 2s;
+        }
+        .two:hover{
+            transform: rotate(180deg);
+            width: 200px;
+            height: 200px;
+        }
+        .three{
+            width: 100px;
+            height: 80px;
+            background-color: rgb(150, 216, 202);
+            color: gray;
+            padding: 10px 10px;
+            margin: 50px 90px;
+            transform: skewX(10deg);
+            transform: skewY(30deg);
+        }
+        .four{
+            width: 100px;
+            height: 80px;
+            background-color: rgb(103, 33, 112);
+            padding: 10px 10px;
+            margin: 20px 20px;
+            animation-name: four;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            position: absolute;
+        }
+        @keyframes four{
+          10%{background-color: red; left: 400px; top: 600px; }
+          100%{background-color: chartreuse; left: 1000px; top: 600px; }
+        }
+    </style>
+</head>
+<body>
+        <div class="one">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <hr>
+        <div class="two">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <hr>
+        <div class="three">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <hr>
+        <div class="four">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+</body>
+</html>

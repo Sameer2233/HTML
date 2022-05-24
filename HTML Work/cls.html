@@ -6,19 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-       #image{
-        position: fixed;
-        padding: 10px;
-        font-weight: bold;
-        background-color: lightgray;
-       }
+      :root{
+        --padding: 20px;
+    }
+    .cont{
+        display: flex;
+        margin: 20px 10px;
+        height: 400px;
+        justify-content: space-around;
+    }
+    .cont div{
+        background-color: tomato;
+        padding: var(--padding);
+        box-sizing: border-box;
+        border: 2px solid gold;
+        margin: 5px;
+      
+    }
     </style>
 </head>
 <body>
 
-       <p id="image">
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus distinctio dolorum nostrum, accusantium perferendis repellat. Voluptatem nostrum voluptate cupiditate dolore molestiae fugiat eaque nobis, earum dolores? Omnis odit quibusdam hic!
-       </p>
+    <div class="cont">
+        <div class="box">
+            <h3>Box 1</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="box">
+            <h3>Box 2</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+        <div>
+            <h3 class="box">Box 3</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>   
 
 </body>
 </html>

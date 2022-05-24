@@ -10,6 +10,17 @@
         h3{
             margin-top: 20px;
         }
+        button{
+            width: 200px;
+            margin-left: 50px;
+            font-size: 20px;
+        }
+        #content{
+            margin-top: 10px;
+        }
+        button:hover{
+            background-color: gold;
+        }
     </style>
 </head>
 <body>
@@ -35,6 +46,13 @@
 
         <h3>Added Image Using JS</h3>
         <p id="img"></p>
+
+        <hr>
+
+        <button onclick="show()" onmouseover="red(this)">Content</button>
+        <button class="img" onclick="image()" onmouseover="red(this)">Image</button>
+        <p id="content" onmouseenter="mouse(this)" onmouseleave="leave(this)">
+        </p>
 
         <hr>
 
@@ -79,7 +97,34 @@
         img.setAttribute("height", "228");
         document.getElementById("img").appendChild(img);
 
-    </script>
+        function show(){
+            document.getElementById("content").innerHTML="The Internet of Things (IoT) refers to a vast number of “things” that are connected to the internet so they can share data with other things IoT applications, connected devices, industrial machines and more. Internet-connected devices use built-in sensors to collect data and, in some cases, act on it."
+        }
+
+        function red(o){
+            o.style.color="red"
+        }
+        
+        function image(){
+            const img2 = document.createElement("IMG");
+            img2.setAttribute("src", "/Assignment-1/img/Space3.jpg");
+            img2.setAttribute("width", "304");
+            img2.setAttribute("height", "228");
+            document.getElementById("content").appendChild(img2);
+        }
+        
+        function mouse(m){
+            m.style.border="10px solid Orange"
+            m.style.background="#00FFFF"
+        }
+
+        function leave(n){
+            n.style.border="none"
+            n.style.color="red"
+            n.style.background="black"
+        }
+
+        </script>
 
 </body>
 </html>

@@ -57,9 +57,18 @@
             animation-direction: alternate;
             position: absolute;
         }
-        @keyframes four{
+        /* @keyframes four{
           10%{background-color: red; left: 400px; top: 600px; }
           100%{background-color: chartreuse; left: 1000px; top: 600px; }
+        } */
+        .five, .six{
+            /* float: left; */
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid black;
+            background-color: aliceblue;
         }
     </style>
 </head>
@@ -75,9 +84,36 @@
         <div class="three">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </div>
-        <hr>
-        <div class="four">
+        <!-- <hr> -->
+        <!-- <div class="four">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div> -->
+        <hr>
+        <div class="five" ondrop="move(event)" ondragover="too(event)">
+           
         </div>
+        <div class="six" ondrop="move(event)" ondragover="too(event)">
+
+        </div>
+        <p ondrop="move(event)" ondragover="too(event)">
+                <img src="/Assignment-1/img/images/bulb2.gif" draggable="true" ondragstart="from(event)" id="seven" width="120" height="100">
+            </p>
+            <hr>
+
+        <script>
+            function too(m){
+                m.preventDefault();
+            }
+            
+            function from(m){
+                m.dataTransfer.setData("some", m.target.id);
+            }
+            
+            function move(m){
+                m.preventDefault();
+                const d = m.dataTransfer.getData("some");
+                m.target.appendChild(document.getElementById(d));
+            }
+        </script>
 </body>
 </html>

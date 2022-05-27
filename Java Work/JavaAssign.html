@@ -64,6 +64,7 @@
 
             <thead>
             <tr>
+                <th>No</th>
                 <th>Name</th>
                 <th>Age</th>
                 <th>Number</th>
@@ -247,6 +248,7 @@
             const show = document.getElementById("data");
             show.innerHTML+=`
                 <tr>
+                    <td>${i +1}</td>
                     <td>${op.name}</td>
                     <td>${op.age}</td>
                     <td>${op.number}</td>
@@ -262,15 +264,17 @@
         const score=['none','734','1000','1234','985','876','1400','8661','0987','0987']
         const game=['cricket','cricket','cricket','cricket','cricket','cricket','cricket','cricket','cricket','cricket']
 
-        for (let m = 0; m <10; m++ ){
-            const r = $('<tr/>')
-            .append($('<td/>', {text: name[m] || ''}))
-            .append($('<td/>', {text: age[m] || ''}))
-            .append($('<td/>', {text: number[m] || ''}))
-            .append($('<td/>', {text: score[m] || ''}))
-            .append($('<td/>', {text: game[m] || ''}));
-                $('table tbody').append(r);
-            }
+        // for (let m = 0; m <10; m++ ){
+        //     const r = $('<tr/>')
+        //     .append($('<td/>', {text: m +1 || ''}))
+
+        //     .append($('<td/>', {text: name[m] || ''}))
+        //     .append($('<td/>', {text: age[m] || ''}))
+        //     .append($('<td/>', {text: number[m] || ''}))
+        //     .append($('<td/>', {text: score[m] || ''}))
+        //     .append($('<td/>', {text: game[m] || ''}));
+        //         $('table tbody').append(r);
+        //     }
 
         </script>
 

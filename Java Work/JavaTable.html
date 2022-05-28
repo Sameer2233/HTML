@@ -53,7 +53,7 @@ const player=[
                 age: '87',
                 number: '098765',
                 score: '198',
-                game: 'cricket'
+                game: 'Hockey'
             },
             {
                 name: 'Sam',
@@ -67,7 +67,7 @@ const player=[
                 age: '33',
                 number: '074325',
                 score: '244',
-                game: 'cricket'
+                game: 'football'
             },
             {
                 name: 'Akr',
@@ -81,14 +81,14 @@ const player=[
                 age: '40',
                 number: '008532',
                 score: '170',
-                game: 'cricket'
+                game: 'Hockey'
             },
             {
                 name: 'David',
                 age: '50',
                 number: '037665',
                 score: '110',
-                game: 'cricket'
+                game: 'football'
             },
             {
                 name: 'Dom',
@@ -102,7 +102,7 @@ const player=[
                 age: '43',
                 number: '098765',
                 score: '55',
-                game: 'cricket'
+                game: 'football'
             },
             {
                 name: 'Akam',
@@ -117,7 +117,42 @@ const player=[
                 number: '012065',
                 score: '170',
                 game: 'cricket'
-            }
+            },
+            {
+                name: 'Mihe',
+                age: '35',
+                number: '099065',
+                score: '120',
+                game: 'football'
+            },
+            {
+                name: 'Akhter',
+                age: '30',
+                number: '019865',
+                score: '177',
+                game: 'cricket'
+            },
+            {
+                name: 'Shehroz',
+                age: '24',
+                number: '087265',
+                score: '70',
+                game: 'cricket'
+            },
+            {
+                name: 'Abdul',
+                age: '22',
+                number: '9298298',
+                score: '17',
+                game: 'football'
+            },
+            {
+                name: 'Sameer',
+                age: '21',
+                number: '929417',
+                score: '70',
+                game: 'Hockey'
+            }            
         ]
 
         function Fun(){
@@ -130,9 +165,29 @@ const player=[
             const filterData=[]
             for(let i = 0; i < data.length; i++){
                 value = value.toLowerCase()
+
                 const name=data[i].name.toLowerCase()
-                
                 if(name.includes(value)){
+                    filterData.push(data[i])
+                }
+
+                const age=data[i].age.toLowerCase()
+                if(age.includes(value)){
+                    filterData.push(data[i])
+                }
+
+                const number=data[i].number.toLowerCase()
+                if(number.includes(value)){
+                    filterData.push(data[i])
+                }
+
+                const score=data[i].score.toLowerCase()
+                if(score.includes(value)){
+                    filterData.push(data[i])
+                }
+
+                const game=data[i].game.toLowerCase()
+                if(game.includes(value)){
                     filterData.push(data[i])
                 }
             }

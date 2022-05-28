@@ -155,63 +155,46 @@ const player=[
             }            
         ]
 
+        
         function Fun(){
-        const value = document.getElementById("input").value;
-        const data= searchTable(value, player)
-        buildTable(data)
-        }
+            const value = document.getElementById("input").value.toLowerCase();
+            const filterData = []
+            for(let i = 0; i < player.length; i++){
 
-        function searchTable(value, data){
-            const filterData=[]
-            for(let i = 0; i < data.length; i++){
-
-                const name=data[i].name.toLowerCase()
-                if(name.includes(value)){
-                    filterData.push(data[i])
-                }
-                
-                // const age=data[i].age.toLowerCase()
-                // if(age.includes(value)){
-                //     filterData.push(data[i])
-                // }
-                
-                // const number=data[i].number.toLowerCase()
-                // if(number.value){
-                //     filterData.push(data[i])
-                // }
-                
-                // const score=data[i].score.toLowerCase()
-                // if(score.value){
-                //     filterData.push(data[i])
-                // }
-                
-                // const game=data[i].game.toLowerCase()
-                // if(game.value){
-                //     filterData.push(data[i])
-                // }
-            }
-            return filterData
-        }
-
-        buildTable(player)
-
-        function buildTable(data){
-            const show = document.getElementById("data");
-            show.innerHTML=''
-            for(let i = 0; i<player.length; i++){
-                var row=`
+                const name1=player[i].name.toLowerCase()
+                if(name1.includes(value)){
+        document.getElementById("data").innerHTML=`
                 <tr>
-                    <td>${i +1}</td>
-                    <td>${data[i].name}</td>
-                    <td>${data[i].age}</td>
-                    <td>${data[i].number}</td>
-                    <td>${data[i].score}</td>
-                    <td>${data[i].game}</td>
+                    <td>${i+1}</td>
+                    <td>${player[i].name}</td>
+                    <td>${player[i].age}</td>
+                    <td>${player[i].number}</td>
+                    <td>${player[i].score}</td>
+                    <td>${player[i].game}</td>
                 </tr>            
             `;
-            show.innerHTML += row;
         }
+                    
+                }
+                return filterData
+            }
+        
+        
+        
+        for(let i = 0; i<player.length; i++){
+        document.getElementById("data").innerHTML+=`
+                <tr>
+                    <td>${i +1}</td>
+                    <td>${player[i].name}</td>
+                    <td>${player[i].age}</td>
+                    <td>${player[i].number}</td>
+                    <td>${player[i].score}</td>
+                    <td>${player[i].game}</td>
+                </tr>            
+            `;
         }
+        
+
 
         
         

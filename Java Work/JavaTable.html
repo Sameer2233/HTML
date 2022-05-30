@@ -156,13 +156,18 @@ const player=[
         ]
 
         function Fun(){
+
         const value = document.getElementById("input").value;
+
         const data= searchTable(value, player)
+
         buildTable(data)
         }
 
         function searchTable(value, data){
+
             const filterData=[]
+
             for(let i = 0; i < data.length; i++){
 
                 const name=data[i].name.toLowerCase()
@@ -170,25 +175,25 @@ const player=[
                     filterData.push(data[i])
                 }
                 
-                // const age=data[i].age.toLowerCase()
-                // if(age.includes(value)){
-                //     filterData.push(data[i])
-                // }
+                const age=data[i].age.toLowerCase()
+                if(age.includes(value)){
+                    filterData.push(data[i])
+                }
                 
-                // const number=data[i].number.toLowerCase()
-                // if(number.value){
-                //     filterData.push(data[i])
-                // }
+                const number=data[i].number.toLowerCase()
+                if(number.includes(value)){
+                    filterData.push(data[i])
+                }
                 
-                // const score=data[i].score.toLowerCase()
-                // if(score.value){
-                //     filterData.push(data[i])
-                // }
+                const score=data[i].score.toLowerCase()
+                if(score.includes(value)){
+                    filterData.push(data[i])
+                }
                 
-                // const game=data[i].game.toLowerCase()
-                // if(game.value){
-                //     filterData.push(data[i])
-                // }
+                const game=data[i].game.toLowerCase()
+                if(game.includes(value)){
+                    filterData.push(data[i])
+                }
             }
             return filterData
         }
@@ -196,9 +201,13 @@ const player=[
         buildTable(player)
 
         function buildTable(data){
+
             const show = document.getElementById("data");
+
             show.innerHTML=''
+
             for(let i = 0; i<player.length; i++){
+
                 var row=`
                 <tr>
                     <td>${i +1}</td>
@@ -209,6 +218,7 @@ const player=[
                     <td>${data[i].game}</td>
                 </tr>            
             `;
+            
             show.innerHTML += row;
         }
         }

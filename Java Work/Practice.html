@@ -157,13 +157,17 @@ const player=[
 
         
         function Fun(){
+
             const value = document.getElementById("input").value.toLowerCase();
-            const filterData = []
+
+            const filterData = [];
+
             for(let i = 0; i < player.length; i++){
 
-                const name1=player[i].name.toLowerCase()
-                if(name1.includes(value)){
-        document.getElementById("data").innerHTML=`
+            const name1=player[i].name.toLowerCase();
+
+            if(name1.includes(value)){
+                document.getElementById("data").innerHTML=`
                 <tr>
                     <td>${i+1}</td>
                     <td>${player[i].name}</td>

@@ -24,7 +24,7 @@
 
         <hr>
 
-        <input type="text" id="input" onkeyup="Fun()" placeholder="Search.......">
+        <input type="text" id="input" onkeyup="Fun()" placeholder="Search......." onmouseleave="down()">
 
         <table class="table table-striped" id="table">
 
@@ -155,31 +155,84 @@ const player=[
             }            
         ]
 
+        function down(){
+                window.location.reload();
+                myFunction();
+        }     
         
         function Fun(){
 
-            const value = document.getElementById("input").value.toLowerCase();
-
+            const value = document.getElementById("input").value;
             const filterData = [];
 
             for(let i = 0; i < player.length; i++){
 
             const name1=player[i].name.toLowerCase();
-
             if(name1.includes(value)){
-                document.getElementById("data").innerHTML=`
-                <tr>
+                document.getElementById("data").innerHTML=
+                `<tr>
                     <td>${i+1}</td>
                     <td>${player[i].name}</td>
                     <td>${player[i].age}</td>
                     <td>${player[i].number}</td>
                     <td>${player[i].score}</td>
                     <td>${player[i].game}</td>
-                </tr>            
-            `;
-        }
-                    
-                }
+                </tr>`;
+            }
+
+        const age1=player[i].age.toLowerCase();
+            if(age1.includes(value)){
+                document.getElementById("data").innerHTML=
+                `<tr>
+                    <td>${i+1}</td>
+                    <td>${player[i].name}</td>
+                    <td>${player[i].age}</td>
+                    <td>${player[i].number}</td>
+                    <td>${player[i].score}</td>
+                    <td>${player[i].game}</td>
+                </tr>`;
+            }
+
+            const num1=player[i].number.toLowerCase();
+            if(num1.includes(value)){
+                document.getElementById("data").innerHTML=
+                `<tr>
+                    <td>${i+1}</td>
+                    <td>${player[i].name}</td>
+                    <td>${player[i].age}</td>
+                    <td>${player[i].number}</td>
+                    <td>${player[i].score}</td>
+                    <td>${player[i].game}</td>
+                </tr>`;
+            }
+
+            const score1=player[i].score.toLowerCase();
+            if(score1.includes(value)){
+                document.getElementById("data").innerHTML=
+                `<tr>
+                    <td>${i+1}</td>
+                    <td>${player[i].name}</td>
+                    <td>${player[i].age}</td>
+                    <td>${player[i].number}</td>
+                    <td>${player[i].score}</td>
+                    <td>${player[i].game}</td>
+                </tr>`;
+            }
+
+            const game1=player[i].game.toLowerCase();
+            if(game1.includes(value)){
+                document.getElementById("data").innerHTML=
+                `<tr>
+                    <td>${i+1}</td>
+                    <td>${player[i].name}</td>
+                    <td>${player[i].age}</td>
+                    <td>${player[i].number}</td>
+                    <td>${player[i].score}</td>
+                    <td>${player[i].game}</td>
+                </tr>`;
+            }
+
+                    }
                 return filterData
             }
         

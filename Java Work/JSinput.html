@@ -78,13 +78,19 @@
 
         <div class="input">
             <label for="Age">Age:
-                <input type="number" id="age" placeholder="Student Age" required>
+                <input type="number" id="age" placeholder="Age" required>
             </label>
         </div>
 
         <div class="input">
             <label for="Grade">Grade:
-                <input type="text" id="grade" placeholder="Student Grades" required>
+                <input type="text" id="grade" placeholder="Grades" required>
+            </label>
+        </div>
+
+        <div class="input">
+            <label for="Grade">Email:
+                <input type="email" id="email" placeholder="Email" required>
             </label>
         </div>
 
@@ -95,6 +101,7 @@
                 <th>Name</th>
                 <th>Age</th>
                 <th>Grades</th>
+                <th>Email</th>
             </tr>
         </table>
 
@@ -109,6 +116,7 @@
             const name = document.getElementById("name").value;
             const age = document.getElementById("age").value;
             const grade = document.getElementById("grade").value;
+            const email = document.getElementById("email").value;
 
             if(!name || !age || !grade){
                 alert("Please Fill Form");
@@ -122,12 +130,14 @@
             const cell1 = newRow.insertCell(0);
             const cell2 = newRow.insertCell(1);
             const cell3 = newRow.insertCell(2);
+            const cell4 = newRow.insertCell(3);
 
             cell1.innerHTML =  name;
             cell2.innerHTML =  age;
             cell3.innerHTML =  grade;
+            cell4.innerHTML =  email;
 
-            // row++;
+            row++;
         }
 
 

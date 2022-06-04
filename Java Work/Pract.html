@@ -4,26 +4,181 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice</title> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>JS Form</title> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+
+        h1{
+            background-color: aqua;
+            margin: 5px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        button{
+            margin-left: 5%;
+        }
+
+        .input{
+            padding: 5px;
+            font-size: 20px;
+            width: 40%;
+            color: rgb(245, 8, 8);
+            font-family: cursive;
+            font-size: 700;
+        }
+
+        #entry{
+            width: 150px;
+            height: 40px;
+            font-size: 23px;
+            font-family: cursive;
+            background-color: blue;
+            color: wheat;
+        }
+
+        table{
+            border-collapse: collapse;
+            margin: 50px auto;
+            background-color: burlywood;
+            position: absolute;
+            top: 15%;
+            right: 9%;
+            width: 50%;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        
+        table, th, td{
+            border: 2px solid black;
+            padding: 5px;
+        }
+
+        th{
+            font-size: 20px;
+            font-family: cursive;
+            color: red;
+            text-align: center;
+        }
+
+        td{
+            font-size: 19px;
+            color: black;
+            font-family: cursive;
+        }
+
+        @media 
+        only screen and (max-width: 760px),
+        (min-device-width: 768px) and (max-device-width: 1024px){
+            table{ 
+                position: absolute; 
+                top: 90%;
+                overflow: scroll;
+            }
+            tr{
+                overflow: scroll;
+
+            }
+        }
+
+
+    </style>
 </head>
 <body>
 
     <div class="container">
 
-        <!-- <FORM NAME="form" ACTION="" METHOD="GET">
-            Enter something in the box: <BR>
-            <INPUT TYPE="text" NAME="input" VALUE=""><P>
-            <INPUT TYPE="button" NAME="button" Value="Click" onClick="testResults(this.form)">
-            </FORM> -->
+        <h1>Student Data</h1>
+
+        <!-- <form action="form" class="input"> -->
+
+
+        <div class="input">
+            <label for="Name">Name:
+            </label>
+            <br>
+            <input type="text" id="name" placeholder="Student Name" required>
+            <!-- <br><br> -->
+        </div>
+
+        <div class="input">
+            <label for="Age">Age:
+            </label>
+            <br>
+            <input type="number" id="age" placeholder="Age" required>
+            <!-- <br><br>             -->
+        </div>
+
+        <div class="input">
+            <label for="Grade">Grade:
+            </label>
+            <br>
+            <input type="text" id="grade" placeholder="Grades" required>
+            <!-- <br><br> -->
+        </div>
+
+        <div class="input">
+            <label for="Grade">Email:
+            </label>
+            <br>
+            <input type="email" id="email" placeholder="Email" required>
+        </div>
+
+        <div class="input">
+            <label for="number">Number:
+            </label>
+            <br>
+            <input type="tel" id="number" placeholder="Number" maxlength="11" required>
+        </div>
+
+        <br>
+
+    <!-- </form> -->
+
+
+        <button id="entry" onclick="detail()">Submit</button>
+
+        <table id="display">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grades</th>
+                <th>Email</th>
+                <th>Number</th>
+            </tr>
+        </table>
 
     </div>
 
     <script>
     
-    // function testResults (form) {
-    //     var TestVar = form.input.value;
-    //     alert ("You typed: " + TestVar);
-    // }
+    const enter = document.getElementById("entry");
+    const row = 1;
+
+        function detail(){
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            const grade = document.getElementById("grade").value;
+            const email = document.getElementById("email").value;
+            const number = document.getElementById("number").value;
+
+            const display = document.getElementById("display");
+            const newRow = display.insertRow(row);
+
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+            const cell4 = newRow.insertCell(3);
+            const cell5 = newRow.insertCell(4);
+
+            cell1.innerHTML =  name;
+            cell2.innerHTML =  age;
+            cell3.innerHTML =  grade;
+            cell4.innerHTML =  email;
+            cell5.innerHTML =  number;
+
+            row++;
+        }
+
 
     </script>
     

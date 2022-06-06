@@ -104,7 +104,7 @@
             <label for="Age">Age:
             </label>
             <br>
-            <input type="number" id="age" placeholder="Age" required>
+            <input type="number" id="age" placeholder="18" min="18" required>
             <!-- <br><br>             -->
         </div>
 
@@ -112,7 +112,7 @@
             <label for="Grade">Grade:
             </label>
             <br>
-            <input type="text" id="grade" placeholder="Grades" required>
+            <input type="text" id="grade" placeholder="A+" required>
             <!-- <br><br> -->
         </div>
 
@@ -120,14 +120,14 @@
             <label for="Grade">Email:
             </label>
             <br>
-            <input type="email" id="email" placeholder="Email" required>
+            <input type="email" id="email" placeholder="StudentData@gamil.com">
         </div>
 
         <div class="input">
             <label for="number">Number:
             </label>
             <br>
-            <input type="tel" id="number" placeholder="Number" maxlength="11" required>
+            <input type="tel" id="number" placeholder="123456789" maxlength="11" required>
         </div>
 
         <br>
@@ -160,6 +160,11 @@
             const grade = document.getElementById("grade").value;
             const email = document.getElementById("email").value;
             const number = document.getElementById("number").value;
+
+            if(!name || !age || !grade || !number){
+                alert("Please Fill Form");
+                return;
+            }
 
             const display = document.getElementById("display");
             const newRow = display.insertRow(row);
